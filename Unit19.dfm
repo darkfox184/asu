@@ -3,8 +3,8 @@ object Ocenivanie: TOcenivanie
   Left = 0
   Top = 0
   Caption = #1054#1094#1077#1085#1080#1074#1072#1085#1080#1077
-  ClientHeight = 425
-  ClientWidth = 1273
+  ClientHeight = 578
+  ClientWidth = 1145
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -130,7 +130,6 @@ object Ocenivanie: TOcenivanie
     Top = 90
     Width = 192
     Height = 29
-    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -190,7 +189,6 @@ object Ocenivanie: TOcenivanie
     Top = 148
     Width = 409
     Height = 29
-    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -303,7 +301,6 @@ object Ocenivanie: TOcenivanie
     Top = 206
     Width = 192
     Height = 27
-    Enabled = False
     KeyField = 'id'
     ListField = 'name'
     ListSource = DataModule4.Sourcetipocenki
@@ -377,7 +374,7 @@ object Ocenivanie: TOcenivanie
         'nka.name From groups, studs LEft Join ocenka On studs.id=ocenka.' +
         'st_id WHERE groups.id=studs.gp_id')
     Left = 96
-    Top = 512
+    Top = 483
   end
   object FDQuery2: TFDQuery
     Connection = DataModule4.FDConnection1
@@ -387,7 +384,7 @@ object Ocenivanie: TOcenivanie
   object DataSource1: TDataSource
     DataSet = FDQuery1
     Left = 24
-    Top = 512
+    Top = 483
   end
   object DataSource2: TDataSource
     DataSet = FDQuery3
@@ -425,13 +422,7 @@ object Ocenivanie: TOcenivanie
     Top = 469
   end
   object DataSource3: TDataSource
-    DataSet = FDQuery8
     Left = 680
     Top = 469
-  end
-  object FDQuery8: TFDQuery
-    Connection = DataModule4.FDConnection1
-    Left = 792
-    Top = 472
   end
 end
