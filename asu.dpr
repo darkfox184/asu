@@ -20,7 +20,8 @@ uses
   Unit16 in 'Unit16.pas' {fam_card},
   Unit17 in 'Unit17.pas' {red_ks},
   Unit18 in 'Unit18.pas' {Redak_2},
-  Unit19 in 'Unit19.pas' {Ocenivanie};
+  Unit19 in 'Unit19.pas' {Ocenivanie},
+  Unit21 in 'Unit21.pas' {Form21};
 
 {$R *.res}
 
@@ -46,5 +47,6 @@ begin
   Application.CreateForm(Tred_ks, red_ks);
   Application.CreateForm(TRedak_2, Redak_2);
   Application.CreateForm(TOcenivanie, Ocenivanie);
+  Application.CreateForm(TForm21, Form21);
   Application.Run;
 end.
