@@ -2,9 +2,10 @@ object Ocenivanie: TOcenivanie
   AlignWithMargins = True
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = #1054#1094#1077#1085#1080#1074#1072#1085#1080#1077
-  ClientHeight = 578
-  ClientWidth = 1145
+  ClientHeight = 588
+  ClientWidth = 1161
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,6 +13,7 @@ object Ocenivanie: TOcenivanie
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poMainFormCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19
@@ -140,7 +142,7 @@ object Ocenivanie: TOcenivanie
     OnClick = DBLookupComboBox2Click
   end
   object DBGrid1: TDBGrid
-    Left = 7
+    Left = 8
     Top = 33
     Width = 378
     Height = 385
@@ -254,7 +256,7 @@ object Ocenivanie: TOcenivanie
   object Button1: TButton
     Left = 825
     Top = 386
-    Width = 225
+    Width = 128
     Height = 29
     Caption = #1059#1076#1072#1083#1080#1090#1100
     Font.Charset = DEFAULT_CHARSET
@@ -310,7 +312,7 @@ object Ocenivanie: TOcenivanie
   object DBGrid2: TDBGrid
     Left = 825
     Top = 33
-    Width = 442
+    Width = 288
     Height = 348
     Margins.Left = 2
     Margins.Top = 2
@@ -337,7 +339,7 @@ object Ocenivanie: TOcenivanie
       item
         Expanded = False
         FieldName = 'fam'
-        Title.Caption = #1060#1040#1052#1048#1051#1048#1071
+        Title.Caption = #1060'.'#1048'.'#1054'.'
         Width = 100
         Visible = True
       end
@@ -350,9 +352,9 @@ object Ocenivanie: TOcenivanie
       end>
   end
   object Button4: TButton
-    Left = 1056
+    Left = 959
     Top = 386
-    Width = 211
+    Width = 139
     Height = 29
     Caption = #1048#1079#1084#1077#1085#1080#1090#1100
     TabOrder = 12
