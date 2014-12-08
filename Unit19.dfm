@@ -2,10 +2,10 @@ object Ocenivanie: TOcenivanie
   AlignWithMargins = True
   Left = 0
   Top = 0
-  BorderStyle = bsDialog
+  Align = alTop
   Caption = #1054#1094#1077#1085#1080#1074#1072#1085#1080#1077
-  ClientHeight = 588
-  ClientWidth = 1161
+  ClientHeight = 396
+  ClientWidth = 1186
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,7 +13,7 @@ object Ocenivanie: TOcenivanie
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19
@@ -142,10 +142,10 @@ object Ocenivanie: TOcenivanie
     OnClick = DBLookupComboBox2Click
   end
   object DBGrid1: TDBGrid
-    Left = 8
+    Left = 7
     Top = 33
     Width = 378
-    Height = 385
+    Height = 348
     DataSource = DataSource1
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     ReadOnly = True
@@ -191,6 +191,7 @@ object Ocenivanie: TOcenivanie
     Top = 148
     Width = 409
     Height = 29
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -254,9 +255,9 @@ object Ocenivanie: TOcenivanie
     TabOrder = 6
   end
   object Button1: TButton
-    Left = 825
-    Top = 386
-    Width = 128
+    Left = 1001
+    Top = 352
+    Width = 170
     Height = 29
     Caption = #1059#1076#1072#1083#1080#1090#1100
     Font.Charset = DEFAULT_CHARSET
@@ -269,7 +270,7 @@ object Ocenivanie: TOcenivanie
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 641
+    Left = 640
     Top = 352
     Width = 170
     Height = 29
@@ -283,37 +284,23 @@ object Ocenivanie: TOcenivanie
     TabOrder = 8
     OnClick = Button2Click
   end
-  object Button3: TButton
-    Left = 640
-    Top = 387
-    Width = 170
-    Height = 29
-    Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -17
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 9
-    OnClick = Button3Click
-  end
   object DBLookupComboBox6: TDBLookupComboBox
     Left = 402
     Top = 206
     Width = 192
     Height = 27
+    Enabled = False
     KeyField = 'id'
     ListField = 'name'
     ListSource = DataModule4.Sourcetipocenki
-    TabOrder = 10
+    TabOrder = 9
     OnClick = DBLookupComboBox6Click
   end
   object DBGrid2: TDBGrid
     Left = 825
     Top = 33
-    Width = 288
-    Height = 348
+    Width = 346
+    Height = 313
     Margins.Left = 2
     Margins.Top = 2
     Margins.Right = 2
@@ -321,7 +308,7 @@ object Ocenivanie: TOcenivanie
     DataSource = DataSource3
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     ReadOnly = True
-    TabOrder = 11
+    TabOrder = 10
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -16
@@ -339,7 +326,7 @@ object Ocenivanie: TOcenivanie
       item
         Expanded = False
         FieldName = 'fam'
-        Title.Caption = #1060'.'#1048'.'#1054'.'
+        Title.Caption = #1060#1040#1052#1048#1051#1048#1071
         Width = 100
         Visible = True
       end
@@ -352,21 +339,13 @@ object Ocenivanie: TOcenivanie
       end>
   end
   object Button4: TButton
-    Left = 959
-    Top = 386
-    Width = 139
+    Left = 825
+    Top = 352
+    Width = 170
     Height = 29
     Caption = #1048#1079#1084#1077#1085#1080#1090#1100
-    TabOrder = 12
-  end
-  object Button5: TButton
-    Left = 402
-    Top = 387
-    Width = 232
-    Height = 29
-    Caption = #1054#1090#1084#1077#1085#1080#1090#1100
-    TabOrder = 13
-    OnClick = Button5Click
+    TabOrder = 11
+    OnClick = Button4Click
   end
   object FDQuery1: TFDQuery
     Connection = DataModule4.FDConnection1
