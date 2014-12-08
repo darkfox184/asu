@@ -3,8 +3,8 @@ object propuskiadd: Tpropuskiadd
   Top = 0
   BorderStyle = bsDialog
   Caption = #1055#1088#1086#1087#1091#1089#1082#1080
-  ClientHeight = 385
-  ClientWidth = 1097
+  ClientHeight = 437
+  ClientWidth = 1136
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -55,8 +55,8 @@ object propuskiadd: Tpropuskiadd
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 829
-    Top = 7
+    Left = 733
+    Top = 9
     Width = 231
     Height = 19
     Caption = #1055#1088#1086#1089#1084#1086#1090#1088' '#1080' '#1080#1079#1084#1077#1085#1077#1085#1080#1077' '#1086#1094#1077#1085#1086#1082':'
@@ -81,7 +81,7 @@ object propuskiadd: Tpropuskiadd
   object DBLookupComboBox2: TDBLookupComboBox
     Left = 402
     Top = 90
-    Width = 263
+    Width = 192
     Height = 29
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -95,7 +95,7 @@ object propuskiadd: Tpropuskiadd
     Left = 7
     Top = 33
     Width = 378
-    Height = 345
+    Height = 342
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     ReadOnly = True
     TabOrder = 2
@@ -136,10 +136,10 @@ object propuskiadd: Tpropuskiadd
       end>
   end
   object Button1: TButton
-    Left = 641
-    Top = 300
-    Width = 170
-    Height = 36
+    Left = 402
+    Top = 261
+    Width = 211
+    Height = 29
     Caption = #1059#1076#1072#1083#1080#1090#1100
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -150,11 +150,11 @@ object propuskiadd: Tpropuskiadd
     TabOrder = 3
   end
   object Button2: TButton
-    Left = 402
-    Top = 258
+    Left = 633
+    Top = 261
     Width = 170
-    Height = 36
-    Caption = #1055#1086#1089#1090#1072#1074#1080#1090#1100' '#1087#1088#1086#1087#1091#1089#1082
+    Height = 29
+    Caption = #1054#1094#1077#1085#1080#1090#1100
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -164,10 +164,10 @@ object propuskiadd: Tpropuskiadd
     TabOrder = 4
   end
   object Button3: TButton
-    Left = 402
-    Top = 300
+    Left = 632
+    Top = 296
     Width = 170
-    Height = 36
+    Height = 29
     Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -178,10 +178,10 @@ object propuskiadd: Tpropuskiadd
     TabOrder = 5
   end
   object DBGrid2: TDBGrid
-    Left = 829
-    Top = 31
-    Width = 260
-    Height = 347
+    Left = 825
+    Top = 27
+    Width = 442
+    Height = 348
     Margins.Left = 2
     Margins.Top = 2
     Margins.Right = 2
@@ -213,31 +213,31 @@ object propuskiadd: Tpropuskiadd
       item
         Expanded = False
         FieldName = 'name'
-        Title.Caption = #1055#1056#1054#1055#1059#1057#1050
+        Title.Caption = #1054#1062#1045#1053#1050#1040
         Width = 90
         Visible = True
       end>
   end
   object Button4: TButton
-    Left = 641
-    Top = 258
-    Width = 170
-    Height = 36
+    Left = 402
+    Top = 296
+    Width = 211
+    Height = 29
     Caption = #1048#1079#1084#1077#1085#1080#1090#1100
     TabOrder = 7
   end
   object Button5: TButton
-    Left = 641
-    Top = 342
-    Width = 170
-    Height = 36
+    Left = 402
+    Top = 331
+    Width = 211
+    Height = 29
     Caption = #1054#1090#1084#1077#1085#1080#1090#1100
     TabOrder = 8
   end
   object RadioGroup1: TRadioGroup
     Left = 402
     Top = 144
-    Width = 409
+    Width = 351
     Height = 97
     Caption = #1055#1088#1080#1095#1080#1085#1072' '#1087#1088#1086#1087#1091#1089#1082#1072':'
     Items.Strings = (
