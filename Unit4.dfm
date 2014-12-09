@@ -17,7 +17,6 @@ object DataModule4: TDataModule4
     Top = 9
   end
   object FDQuery15: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       
