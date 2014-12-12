@@ -14,6 +14,7 @@ object propuskiadd: Tpropuskiadd
   Font.Style = []
   OldCreateOrder = False
   Position = poDesigned
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 19
   object Label1: TLabel
@@ -58,9 +59,9 @@ object propuskiadd: Tpropuskiadd
   object Label8: TLabel
     Left = 829
     Top = 7
-    Width = 231
+    Width = 249
     Height = 19
-    Caption = #1055#1088#1086#1089#1084#1086#1090#1088' '#1080' '#1080#1079#1084#1077#1085#1077#1085#1080#1077' '#1086#1094#1077#1085#1086#1082':'
+    Caption = #1055#1088#1086#1089#1084#1086#1090#1088' '#1080' '#1080#1079#1084#1077#1085#1077#1085#1080#1077' '#1087#1088#1086#1087#1091#1089#1082#1086#1074
   end
   object Label4: TLabel
     Left = 402
@@ -178,6 +179,7 @@ object propuskiadd: Tpropuskiadd
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 402
@@ -207,6 +209,7 @@ object propuskiadd: Tpropuskiadd
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    Visible = False
   end
   object DBGrid2: TDBGrid
     Left = 829
@@ -277,8 +280,9 @@ object propuskiadd: Tpropuskiadd
     Top = 362
     Width = 170
     Height = 36
-    Caption = #1048#1079#1084#1077#1085#1080#1090#1100
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1082#1086#1083'-'#1074#1086
     TabOrder = 7
+    OnClick = Button4Click
   end
   object Button5: TButton
     Left = 641
@@ -287,6 +291,7 @@ object propuskiadd: Tpropuskiadd
     Height = 36
     Caption = #1054#1090#1084#1077#1085#1080#1090#1100
     TabOrder = 8
+    Visible = False
   end
   object RadioGroup1: TRadioGroup
     Left = 402

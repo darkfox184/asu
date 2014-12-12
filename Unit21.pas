@@ -47,6 +47,8 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ALL_DELETE;
     procedure FILTER;
+    procedure Button1Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -88,6 +90,7 @@ end;
 
 
 
+
 procedure Tpropuskiadd.UPDATE;
 begin
 FDquery1.SQL.Clear;
@@ -114,6 +117,18 @@ end;
 
 
 
+procedure Tpropuskiadd.Button1Click(Sender: TObject);
+begin
+FDQuery4.SQL.Clear;
+FDQuery4.SQL.Add ('DELETE FROM propuski WHERE id='+DBGrid2.Fields[0].DisplayText+'');
+FDQuery4.ExecSQL;
+ALL_DELETE;
+INSERTE;
+UPDATE;
+FILTER;
+SELECTE;
+end;
+
 procedure Tpropuskiadd.Button2Click(Sender: TObject);
 begin
 FDQuery4.SQL.Clear;
@@ -131,6 +146,15 @@ SELECTE;
 end;
 
 
+
+procedure Tpropuskiadd.Button4Click(Sender: TObject);
+begin
+FDQuery4.SQL.Clear;
+FDQuery4.SQL.Add ('UPDATE propuski SET koll=:koll WHERE id='+DBGrid2.Fields[0].DisplayText+'');
+FDQuery4.ParamByName('koll').AsString:=Edit1.Text;
+FDQuery4.ExecSQL;
+FDQuery3.Refresh;
+end;
 
 procedure Tpropuskiadd.DateTimePicker1Change(Sender: TObject);
 begin
