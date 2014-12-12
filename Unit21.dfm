@@ -259,11 +259,6 @@ object propuskiadd: Tpropuskiadd
         FieldName = 'koll'
         Title.Alignment = taCenter
         Title.Caption = #1050#1054#1051'-'#1042#1054
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -16
-        Title.Font.Name = 'Tahoma'
-        Title.Font.Style = []
         Width = 63
         Visible = True
       end

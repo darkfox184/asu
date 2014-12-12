@@ -41,7 +41,12 @@ type
     procedure DBLookupComboBox1Click(Sender: TObject);
     procedure DBLookupComboBox2Click(Sender: TObject);
     procedure SELECTE;
+    procedure INSERTE;
+    procedure UPDATE;
     procedure DateTimePicker1Change(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure ALL_DELETE;
+    procedure FILTER;
   private
     { Private declarations }
   public
@@ -55,12 +60,51 @@ implementation
 
 {$R *.dfm}
 
+procedure Tpropuskiadd.FILTER;// чистим табл от идентичных записей
+begin
+FDQuery1.SQL.Clear;
+FDQuery1.SQL.Clear;
+FDQuery1.SQL.Add ('DELETE propuskinew.* FROM propuskinew, propuski  WHERE propuskinew.date=propuski.date and propuskinew.st_id=propuski.st_id');
+FDQuery1.ExecSQL;
+end;
+
+
+procedure Tpropuskiadd.ALL_DELETE;
+begin
+FDQuery1.SQL.Clear;
+FDQuery1.SQL.Add ('DELETE FROM propuskinew WHERE id<>0');
+FDQuery1.ExecSQL;
+end;
+
+
+
+procedure Tpropuskiadd.INSERTE;
+begin
+FDquery1.SQL.Clear;
+FDquery1.SQL.Add ('INSERT INTO propuskinew (st_id) SELECT id FROM studs WHERE studs.gp_id=:in2');
+FDQuery1.ParamByName('in2').AsString:=DBLookupComboBox2.KeyValue;
+FDQuery1.ExecSQL;
+end;
+
+
+
+procedure Tpropuskiadd.UPDATE;
+begin
+FDquery1.SQL.Clear;
+FDquery1.SQL.Add ('UPDATE propuskinew SET date=:date');
+FDQuery1.ParamByName('date').AsDate:=DateTimePicker1.Date;
+FDQuery1.ExecSQL;
+end;
+
+
+
 procedure Tpropuskiadd.SELECTE;
 begin
 FDquery1.SQL.Clear; //
-FDquery1.SQL.Add ('SELECT DISTINCT studs.id, studs.fam, studs.imya, studs.otch FROM studs, propuski WHERE gp_id=:id and studs.id<>propuski.st_id');
+FDquery1.SQL.Add ('SELECT studs.id, studs.fam, studs.imya, studs.otch FROM studs, propuskinew WHERE gp_id=:id and studs.id=propuskinew.st_id');
 FDQuery1.ParamByName('id').AsString:=DBLookupComboBox2.KeyValue;
 FDQuery1.Open;
+
 FDquery3.SQL.Clear; //
 FDquery3.SQL.Add ('SELECT propuski.id, studs.fam, propuski.date, propuski.koll, propuski.prichina FROM studs, propuski WHERE studs.gp_id=:id and propuski.date=:in1 and studs.id=propuski.st_id');
 FDQuery3.ParamByName('id').AsString:=DBLookupComboBox2.KeyValue;
@@ -82,14 +126,18 @@ FDQuery4.ParamByName('prichina').AsString:='Уважительная'
 else
 FDQuery4.ParamByName('prichina').AsString:='Неуважительная';
 FDQuery4.ExecSQL;
-FDQuery1.Refresh;
-FDQuery3.Refresh;
+FILTER;
+SELECTE;
 end;
 
 
 
 procedure Tpropuskiadd.DateTimePicker1Change(Sender: TObject);
 begin
+ALL_DELETE;
+INSERTE;
+UPDATE;
+FILTER;
 SELECTE;
 end;
 
@@ -97,6 +145,8 @@ end;
 
 procedure Tpropuskiadd.DBLookupComboBox1Click(Sender: TObject);
 begin
+DBGrid1.Visible:=False;
+DBGrid2.Visible:=False;
 FDquery2.SQL.Clear; //
 FDquery2.SQL.Add ('select * from groups WHERE sp_id= :in2 ');
 FDQuery2.ParamByName('in2').AsString:=DBLookupComboBox1.KeyValue;
@@ -117,6 +167,22 @@ procedure Tpropuskiadd.DBLookupComboBox2Click(Sender: TObject);
 begin
 DBGrid1.Visible:=True;
 DBGrid2.Visible:=True;
+ALL_DELETE;
+INSERTE;
+UPDATE;
+FILTER;
 SELECTE;
 end;
+
+
+
+procedure Tpropuskiadd.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ALL_DELETE;
+DBLookupComboBox1.KeyValue:=-1;
+DBLookupComboBox2.KeyValue:=-1;
+DBGrid1.Visible:=False;
+DBGrid2.Visible:=False;
+end;
+
 end.
