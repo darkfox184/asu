@@ -1,11 +1,10 @@
 object propuskiadd: Tpropuskiadd
   Left = 0
   Top = 93
-  Align = alTop
   BorderStyle = bsDialog
   Caption = #1055#1088#1086#1087#1091#1089#1082#1080
-  ClientHeight = 571
-  ClientWidth = 1311
+  ClientHeight = 547
+  ClientWidth = 1271
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,7 +12,7 @@ object propuskiadd: Tpropuskiadd
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poMainFormCenter
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 19
@@ -168,7 +167,7 @@ object propuskiadd: Tpropuskiadd
   end
   object Button1: TButton
     Left = 641
-    Top = 404
+    Top = 460
     Width = 170
     Height = 36
     Caption = #1059#1076#1072#1083#1080#1090#1100
@@ -183,7 +182,7 @@ object propuskiadd: Tpropuskiadd
   end
   object Button2: TButton
     Left = 402
-    Top = 362
+    Top = 418
     Width = 170
     Height = 36
     Caption = #1055#1086#1089#1090#1072#1074#1080#1090#1100' '#1087#1088#1086#1087#1091#1089#1082
@@ -198,7 +197,7 @@ object propuskiadd: Tpropuskiadd
   end
   object Button3: TButton
     Left = 402
-    Top = 404
+    Top = 502
     Width = 170
     Height = 36
     Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
@@ -214,7 +213,7 @@ object propuskiadd: Tpropuskiadd
   object DBGrid2: TDBGrid
     Left = 829
     Top = 31
-    Width = 476
+    Width = 436
     Height = 395
     Margins.Left = 2
     Margins.Top = 2
@@ -277,7 +276,7 @@ object propuskiadd: Tpropuskiadd
   end
   object Button4: TButton
     Left = 641
-    Top = 362
+    Top = 418
     Width = 170
     Height = 36
     Caption = #1048#1079#1084#1077#1085#1080#1090#1100' '#1082#1086#1083'-'#1074#1086
@@ -286,7 +285,7 @@ object propuskiadd: Tpropuskiadd
   end
   object Button5: TButton
     Left = 641
-    Top = 446
+    Top = 502
     Width = 170
     Height = 36
     Caption = #1054#1090#1084#1077#1085#1080#1090#1100
@@ -295,7 +294,7 @@ object propuskiadd: Tpropuskiadd
   end
   object RadioGroup1: TRadioGroup
     Left = 402
-    Top = 241
+    Top = 216
     Width = 409
     Height = 97
     Caption = #1055#1088#1080#1095#1080#1085#1072' '#1087#1088#1086#1087#1091#1089#1082#1072':'
@@ -320,11 +319,67 @@ object propuskiadd: Tpropuskiadd
     OnChange = DateTimePicker1Change
   end
   object Edit1: TEdit
-    Left = 402
-    Top = 208
+    Left = 628
+    Top = 183
     Width = 39
     Height = 27
     TabOrder = 11
+  end
+  object GroupBox1: TGroupBox
+    Left = 402
+    Top = 319
+    Width = 408
+    Height = 93
+    Caption = #1055#1088#1086#1087#1091#1097#1077#1085#1085#1099#1077' '#1087#1072#1088#1099':'
+    TabOrder = 12
+    object CheckBox1: TCheckBox
+      Left = 160
+      Top = 56
+      Width = 25
+      Height = 1
+      Caption = 'CheckBox1'
+      TabOrder = 0
+    end
+    object CheckBox2: TCheckBox
+      Left = 17
+      Top = 32
+      Width = 97
+      Height = 17
+      Caption = '1 '#1087#1072#1088#1072
+      TabOrder = 1
+    end
+    object CheckBox3: TCheckBox
+      Left = 16
+      Top = 55
+      Width = 97
+      Height = 17
+      Caption = '2 '#1087#1072#1088#1072
+      TabOrder = 2
+    end
+    object CheckBox4: TCheckBox
+      Left = 128
+      Top = 33
+      Width = 97
+      Height = 17
+      Caption = '3 '#1087#1072#1088#1072
+      TabOrder = 3
+    end
+    object CheckBox5: TCheckBox
+      Left = 128
+      Top = 56
+      Width = 97
+      Height = 17
+      Caption = '4 '#1087#1072#1088#1072
+      TabOrder = 4
+    end
+    object CheckBox6: TCheckBox
+      Left = 248
+      Top = 32
+      Width = 97
+      Height = 17
+      Caption = '5 '#1087#1072#1088#1072
+      TabOrder = 5
+    end
   end
   object DataSource1: TDataSource
     DataSet = FDQuery1
@@ -333,8 +388,8 @@ object propuskiadd: Tpropuskiadd
   end
   object DataSource2: TDataSource
     DataSet = FDQuery2
-    Left = 472
-    Top = 480
+    Left = 216
+    Top = 432
   end
   object DataSource3: TDataSource
     DataSet = FDQuery3
@@ -348,8 +403,8 @@ object propuskiadd: Tpropuskiadd
   end
   object FDQuery2: TFDQuery
     Connection = DataModule4.FDConnection1
-    Left = 472
-    Top = 528
+    Left = 160
+    Top = 432
   end
   object FDQuery3: TFDQuery
     Connection = DataModule4.FDConnection1
@@ -362,7 +417,7 @@ object propuskiadd: Tpropuskiadd
     Connection = DataModule4.FDConnection1
     SQL.Strings = (
       'SELECT propuski.*, studs.fam FROM propuski, studs;')
-    Left = 584
-    Top = 360
+    Left = 160
+    Top = 488
   end
 end
