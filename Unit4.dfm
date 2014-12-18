@@ -11,7 +11,6 @@ object DataModule4: TDataModule4
       'User_Name=root'
       'Database=asu'
       'DriverID=MySQL')
-    Connected = True
     LoginPrompt = False
     Left = 28
     Top = 9

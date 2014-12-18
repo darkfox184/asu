@@ -41,10 +41,17 @@ object uchplanst: Tuchplanst
     end
     object Label4: TLabel
       Left = 16
-      Top = 104
+      Top = 96
       Width = 132
       Height = 19
       Caption = #1053#1072#1095#1072#1083#1086' '#1080#1079#1091#1095#1077#1085#1080#1103':'
+    end
+    object Label5: TLabel
+      Left = 16
+      Top = 121
+      Width = 98
+      Height = 19
+      Caption = #1057#1077#1084#1077#1089#1090#1088' '#8470'1:'
     end
     object name_pr: TEdit
       Left = 94
@@ -80,6 +87,22 @@ object uchplanst: Tuchplanst
       TabOrder = 3
       OnClick = Button1Click
     end
+    object semd: TComboBox
+      Left = 120
+      Top = 121
+      Width = 129
+      Height = 27
+      TabOrder = 4
+      Items.Strings = (
+        '1'
+        '2'
+        '3'
+        '4'
+        '5'
+        '6'
+        '7'
+        '8')
+    end
   end
   object GroupBox2: TGroupBox
     Left = 8
@@ -108,6 +131,13 @@ object uchplanst: Tuchplanst
       Width = 132
       Height = 19
       Caption = #1053#1072#1095#1072#1083#1086' '#1080#1079#1091#1095#1077#1085#1080#1103':'
+    end
+    object Label8: TLabel
+      Left = 368
+      Top = 71
+      Width = 66
+      Height = 19
+      Caption = #1057#1077#1084#1077#1089#1090#1088':'
     end
     object chasi_red: TEdit
       Left = 160
@@ -162,6 +192,23 @@ object uchplanst: Tuchplanst
         #1100#1085#1086#1089#1090#1077#1081
       Caption = #1054#1090#1087#1088#1072#1074#1080#1090#1100' '#1074' '#1072#1088#1093#1080#1074
       TabOrder = 5
+    end
+    object semr: TComboBox
+      Left = 440
+      Top = 71
+      Width = 161
+      Height = 27
+      TabOrder = 6
+      Text = #1042#1099#1073#1080#1088#1077#1090#1077' '#1089#1077#1084#1077#1089#1090#1088
+      Items.Strings = (
+        '1'
+        '2'
+        '3'
+        '4'
+        '5'
+        '6'
+        '7'
+        '8')
     end
   end
   object GroupBox3: TGroupBox

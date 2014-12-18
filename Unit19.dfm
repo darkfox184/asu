@@ -4,7 +4,7 @@ object Ocenivanie: TOcenivanie
   Top = 0
   Align = alTop
   Caption = #1054#1094#1077#1085#1080#1074#1072#1085#1080#1077
-  ClientHeight = 396
+  ClientHeight = 387
   ClientWidth = 1186
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

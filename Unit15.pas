@@ -43,6 +43,10 @@ type
     DBGrid2: TDBGrid;
     arhiv: TCheckBox;
     arhiv_box: TCheckBox;
+    Label5: TLabel;
+    semd: TComboBox;
+    semr: TComboBox;
+    Label8: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure DBLookupComboBox1Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
@@ -86,11 +90,12 @@ arhiv.Checked:=false;
 procedure Tuchplanst.Button1Click(Sender: TObject);
 begin
 DataModule4.Queryinsdsp_ucp.SQL.Clear;
-DataModule4.Queryinsdsp_ucp.SQL.Add ('INSERT INTO predmeti (name,chasi,god_n,sp_id) VALUES (:name,:chasi,:god_n,:sp_id)');
+DataModule4.Queryinsdsp_ucp.SQL.Add ('INSERT INTO predmeti (name,chasi,god_n,sp_id,sem) VALUES (:name,:chasi,:god_n,:sp_id,:sem)');
 DataModule4.Queryinsdsp_ucp.ParamByName('name').AsString:=name_pr.Text;
 DataModule4.Queryinsdsp_ucp.ParamByName('chasi').AsString:=chasi.Text;
 DataModule4.Queryinsdsp_ucp.ParamByName('god_n').AsDate:=gon_n.DateTime;
 DataModule4.Queryinsdsp_ucp.ParamByName('sp_id').AsString:=DBLookupComboBox1.KeyValue;
+DataModule4.Queryinsdsp_ucp.ParamByName('sem').AsString:=semd.Text;
 DataModule4.Queryinsdsp_ucp.ExecSQL;
 DataModule4.Querydsp_uchp.Refresh;
 name_pr.Clear;
@@ -172,11 +177,12 @@ name_pr_red.Text:=DBGrid1.Fields[1].AsString;
 chasi_red.Text:=DBGrid1.Fields[2].AsString;
 gon_n_red.DateTime:=DBGrid1.Fields[3].AsDateTime;
 DataModule4.Queryarhiv.SQL.Clear;
-DataModule4.Queryarhiv.SQL.Add ('select arhiv from predmeti WHERE id= :in3 and arhiv=:arhiv');
+DataModule4.Queryarhiv.SQL.Add ('select arhiv,sem from predmeti WHERE id= :in3 and arhiv=:arhiv');
 DataModule4.Queryarhiv.ParamByName('in3').AsString:=DBGrid1.Fields[0].AsString;
 DataModule4.Queryarhiv.ParamByName('arhiv').AsBoolean:=arhiv_box.Checked;
 DataModule4.Queryarhiv.open;
 arhiv.Checked:=DataModule4.Queryarhiv.fields[0].AsBoolean;
+semr.Text:=DataModule4.Queryarhiv.fields[1].AsString;
 end;
 
 procedure Tuchplanst.DBGrid2CellClick(Column: TColumn);
