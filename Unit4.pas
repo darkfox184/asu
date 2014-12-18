@@ -64,8 +64,6 @@ implementation
 {$R *.dfm}
 
 procedure TDataModule4.DataModuleCreate(Sender: TObject);
-var
-serv,usname, bdname,pasw:string;
 begin
 Ini:= TIniFile.Create(ExtractFilePath(ParamStr(0))+'setting.ini');
 FDConnection1.Close;

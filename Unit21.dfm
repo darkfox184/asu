@@ -208,7 +208,7 @@ object propuskiadd: Tpropuskiadd
     Font.Style = []
     ParentFont = False
     TabOrder = 5
-    Visible = False
+    OnClick = Button3Click
   end
   object DBGrid2: TDBGrid
     Left = 829
@@ -333,10 +333,10 @@ object propuskiadd: Tpropuskiadd
     Caption = #1055#1088#1086#1087#1091#1097#1077#1085#1085#1099#1077' '#1087#1072#1088#1099':'
     TabOrder = 12
     object CheckBox1: TCheckBox
-      Left = 160
-      Top = 56
-      Width = 25
-      Height = 1
+      Left = 232
+      Top = 73
+      Width = 49
+      Height = 17
       Caption = 'CheckBox1'
       TabOrder = 0
     end
@@ -365,7 +365,7 @@ object propuskiadd: Tpropuskiadd
       TabOrder = 3
     end
     object CheckBox5: TCheckBox
-      Left = 128
+      Left = 129
       Top = 56
       Width = 97
       Height = 17
@@ -418,6 +418,13 @@ object propuskiadd: Tpropuskiadd
     SQL.Strings = (
       'SELECT propuski.*, studs.fam FROM propuski, studs;')
     Left = 160
+    Top = 488
+  end
+  object FDQuery5: TFDQuery
+    Connection = DataModule4.FDConnection1
+    SQL.Strings = (
+      '')
+    Left = 224
     Top = 488
   end
 end

@@ -55,8 +55,6 @@ implementation
 uses Unit16, Unit4, Unit1, Unit18;
 
 procedure Tkartastud.Button1Click(Sender: TObject);
-var
-sr:string;
 begin
 Redak_2.fiol.Caption:=DBGrid1.Fields[1].AsString;
 Redak_2.nomer.Caption:=DBGrid1.Fields[0].AsString;

@@ -70,7 +70,6 @@ implementation
 uses Unit3, Unit5, Unit6, Unit7, Unit8, Unit17;
 
 procedure Tspstuds.Button1Click(Sender: TObject);
-var search:string;
 begin
 FDquery3.SQL.Clear;
 FDquery3.SQL.Add ('SELECT studs.id, studs.fam,studs.imya,studs.otch,studs.gp_id,groups.name from studs LEFT JOIN groups on groups.id=studs.gp_id WHERE studs.otch like ''%'+edit1.text+'%'' or studs.fam like ''%'+edit1.text+'%'' or studs.imya like ''%'+edit1.text+'%''  ');

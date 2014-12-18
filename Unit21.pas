@@ -44,18 +44,20 @@ type
     CheckBox4: TCheckBox;
     CheckBox5: TCheckBox;
     CheckBox6: TCheckBox;
+    FDQuery5: TFDQuery;
     procedure Button2Click(Sender: TObject);
     procedure DBLookupComboBox1Click(Sender: TObject);
     procedure DBLookupComboBox2Click(Sender: TObject);
     procedure SELECTE;
     procedure INSERTE;
-    procedure UPDATE;
+    procedure UPDATES;
     procedure DateTimePicker1Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure ALL_DELETE;
     procedure FILTER;
     procedure Button1Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -98,7 +100,7 @@ end;
 
 
 
-procedure Tpropuskiadd.UPDATE;
+procedure Tpropuskiadd.UPDATES;
 begin
 FDquery1.SQL.Clear;
 FDquery1.SQL.Add ('UPDATE propuskinew SET date=:date');
@@ -124,19 +126,19 @@ end;
 
 
 
-procedure Tpropuskiadd.Button1Click(Sender: TObject);
+procedure Tpropuskiadd.Button1Click(Sender: TObject);//Удалить
 begin
 FDQuery4.SQL.Clear;
 FDQuery4.SQL.Add ('DELETE FROM propuski WHERE id='+DBGrid2.Fields[0].DisplayText+'');
 FDQuery4.ExecSQL;
 ALL_DELETE;
 INSERTE;
-UPDATE;
+UPDATES;
 FILTER;
 SELECTE;
 end;
 
-procedure Tpropuskiadd.Button2Click(Sender: TObject);
+procedure Tpropuskiadd.Button2Click(Sender: TObject); // Поставить пропуск
 begin
 FDQuery4.SQL.Clear;
 FDQuery4.SQL.Add ('INSERT INTO propuski (date,koll,st_id,prichina) VALUES (:date,:koll,:st_id,:prichina)');
@@ -148,9 +150,65 @@ FDQuery4.ParamByName('prichina').AsString:='Уважительная'
 else
 FDQuery4.ParamByName('prichina').AsString:='Неуважительная';
 FDQuery4.ExecSQL;
+
+if CheckBox2.Checked=true then
+begin
+FDquery5.SQL.Clear;
+FDquery5.SQL.Add ('UPDATE propuski SET one="Нб" WHERE st_id=:id and date=:date ');
+FDQuery5.ParamByName('id').AsString:=DBGrid1.Fields[0].DisplayText;
+FDQuery5.ParamByName('date').AsDate:=DateTimePicker1.Date;
+FDQuery5.ExecSQL;
+end;
+if CheckBox3.Checked=true then
+begin
+FDquery5.SQL.Clear;
+FDquery5.SQL.Add ('UPDATE propuski SET two="Нб" WHERE st_id=:id and date=:date ');
+FDQuery5.ParamByName('id').AsString:=DBGrid1.Fields[0].DisplayText;
+FDQuery5.ParamByName('date').AsDate:=DateTimePicker1.Date;
+FDQuery5.ExecSQL;
+end;
+if CheckBox4.Checked=true then
+begin
+FDquery5.SQL.Clear;
+FDquery5.SQL.Add ('UPDATE propuski SET three="Нб" WHERE st_id=:id and date=:date ');
+FDQuery5.ParamByName('id').AsString:=DBGrid1.Fields[0].DisplayText;
+FDQuery5.ParamByName('date').AsDate:=DateTimePicker1.Date;
+FDQuery5.ExecSQL;
+end;
+if CheckBox5.Checked=true then
+begin
+FDquery5.SQL.Clear;
+FDquery5.SQL.Add ('UPDATE propuski SET four="Нб" WHERE st_id=:id and date=:date ');
+FDQuery5.ParamByName('id').AsString:=DBGrid1.Fields[0].DisplayText;
+FDQuery5.ParamByName('date').AsDate:=DateTimePicker1.Date;
+FDQuery5.ExecSQL;
+end;
+if CheckBox6.Checked=true then
+begin
+FDquery5.SQL.Clear;
+FDquery5.SQL.Add ('UPDATE propuski SET five="Нб" WHERE st_id=:id and date=:date ');
+FDQuery5.ParamByName('id').AsString:=DBGrid1.Fields[0].DisplayText;
+FDQuery5.ParamByName('date').AsDate:=DateTimePicker1.Date;
+FDQuery5.ExecSQL;
+end;
 FILTER;
 SELECTE;
 end;
+
+
+
+procedure Tpropuskiadd.Button3Click(Sender: TObject);
+begin
+if CheckBox2.Checked=true then
+begin
+FDquery5.SQL.Clear;
+FDquery5.SQL.Add ('UPDATE propuskinew SET one="Нб" WHERE st_id=:id and date=:date ');
+FDQuery5.ParamByName('id').AsString:=DBGrid1.Fields[0].DisplayText;
+FDQuery5.ParamByName('date').AsDate:=DateTimePicker1.Date;
+FDQuery5.ExecSQL;
+end;
+end;
+
 
 
 
@@ -163,11 +221,14 @@ FDQuery4.ExecSQL;
 FDQuery3.Refresh;
 end;
 
+
+
+
 procedure Tpropuskiadd.DateTimePicker1Change(Sender: TObject);
 begin
 ALL_DELETE;
 INSERTE;
-UPDATE;
+UPDATES;
 FILTER;
 SELECTE;
 end;
@@ -200,7 +261,7 @@ DBGrid1.Visible:=True;
 DBGrid2.Visible:=True;
 ALL_DELETE;
 INSERTE;
-UPDATE;
+UPDATES;
 FILTER;
 SELECTE;
 end;

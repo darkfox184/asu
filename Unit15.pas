@@ -196,7 +196,6 @@ DataModule4.DataSourcedspm_uchp.Enabled:=false;
 end;
 
 procedure Tuchplanst.FormCreate(Sender: TObject);
-var arhiv:Boolean;
 begin
 datamodule4.Querysp_uchp.Active:=true;
 DBLookupComboBox1.KeyValue:=1;
