@@ -8,7 +8,7 @@ uses
   Vcl.DBCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client;
+  FireDAC.Comp.Client, frxExportRTF, frxClass, frxExportPDF, frxDBSet;
 type
   TOcenivanie = class(TForm)
     Label1: TLabel;
@@ -41,6 +41,11 @@ type
     DBGrid2: TDBGrid;
     Button4: TButton;
     Label8: TLabel;
+    frxReport1: TfrxReport;
+    frxDBDataset1: TfrxDBDataset;
+    frxPDFExport1: TfrxPDFExport;
+    Print: TFDQuery;
+    Button3: TButton;
     procedure DBLookupComboBox1Click(Sender: TObject);
     procedure DBLookupComboBox2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -59,6 +64,7 @@ type
     procedure FILTER;
     procedure SELECTE;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button3Click(Sender: TObject);
 
 
   private
@@ -71,7 +77,7 @@ var
   Ocenivanie: TOcenivanie;
   xi: string;
   Again: string;
-
+  in21:  string;
 
 implementation
 
@@ -250,6 +256,41 @@ FDQuery7.Refresh;
 end;
 
 
+// ПЕЧАТЬ
+procedure TOcenivanie.Button3Click(Sender: TObject);
+begin
+Print.SQL.Clear;
+Print.Active:=false;
+Print.SQL.Add ('DELETE FROM  `printo`');
+Print.ExecSQL;
+Print.SQL.Clear;
+Print.SQL.Add ('INSERT INTO printo (id,pr_id,mod_id,st_id,tp_id) SELECT id,pr_id,mod_id,st_id,tp_id FROM ocenka WHERE pr_id=:in21 AND mod_id=:in22 AND tp_id=:in24 ');
+Print.ParamByName('in21').AsString:= DBLookupComboBox3.KeyValue;
+Print.ParamByName('in22').AsString:= DBLookupComboBox4.KeyValue;
+Print.ParamByName('in24').AsString:= DBLookupComboBox6.KeyValue;
+Print.ExecSQL;
+Print.Active:=true;
+FrxReport1.ShowReport;
+                                         (*
+if DBLookupComboBox6.KeyValue=1 then
+begin
+Print.SQL.Add ('INSERT INTO printo(id,pr_id,mod_id ,st_id,tp_id) SELECT name,pr_id, mod_id , st_id, tp_id FROM ocenka, ocenkanew WHERE ocenkanew.pr_id=:in21 AND ocenkanew.mod_id=:in22 AND ocenkanew.st_id=:in23 AND ocenkanew.tp_id=:in24');
+Print.ParamByName('in21').AsString:= DBLookupComboBox3.Text;
+Print.ParamByName('in23').AsString:= DBGrid1.Fields[0].AsString;
+Print.ParamByName('in24').AsString:= DBLookupComboBox6.Text;
+Print.ParamByName('in22').AsString:= DBLookupComboBox6.KeyField;
+//Print.ParamByName('in25').AsString:= DBGrid2.Fields[2].AsString;
+end;
+if DBLookupComboBox6.KeyValue>1 then
+begin
+Print.SQL.Add ('INSERT INTO printo(id,name, pr_id, mod_id , st_id, tp_id) SELECT ocenka.name ,ocenkanew.name,ocenka.st_id,ocenkanew.pr_id,ocenkanew.mod_id,ocenkanew.st_id,ocenkanew.tp_id FROM ocenka, ocenkanew WHERE ocenkanew.pr_id=:in21 AND ocenkanew.st_id=:in23 AND ocenkanew.tp_id=:in24 AND pr_id=:in21');
+Print.ParamByName('in21').AsString:= DBLookupComboBox3.Text;
+Print.ParamByName('in23').AsString:= DBGrid1.Fields[0].AsString;
+Print.ParamByName('in24').AsString:= DBLookupComboBox6.Text;
+//Print.ParamByName('in25').AsString:= DBGrid2.Fields[2].Text;
+end;
+                                         *)
+end;
 
 //КНОПКА ИЗМЕНИТЬ
 procedure TOcenivanie.Button4Click(Sender: TObject);
@@ -289,7 +330,7 @@ DBLookupComboBox2.ListField:='name';
 // показывать в комбике столбик name
 DBLookupComboBox2.KeyField:='id'; //ключевое поле
 DataModule4.Querydsp_uchp.SQL.Clear;
-DataModule4.Querydsp_uchp.SQL.Add ('select id,name from predmeti WHERE sp_id=:in3');
+DataModule4.Querydsp_uchp.SQL.Add ('select id,name FROM predmeti WHERE sp_id=:in3');
 DataModule4.Querydsp_uchp.ParamByName('in3').AsString:=DBLookupComboBox1.KeyValue;
 DataModule4.Querydsp_uchp.open;
 DataModule4.DataSourcedsp.DataSet:=DataModule4.Querydsp_uchp;
