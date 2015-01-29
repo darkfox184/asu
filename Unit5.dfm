@@ -1,16 +1,17 @@
 object redstuds: Tredstuds
-  Left = 0
-  Top = 0
+  Left = 397
+  Top = 372
   Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077' '#1089#1090#1091#1076#1077#1085#1090#1072
   ClientHeight = 258
   ClientWidth = 634
-  Color = clBtnFace
+  Color = 10536670
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesigned
   PixelsPerInch = 96
   TextHeight = 19
   object Label1: TLabel

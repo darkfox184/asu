@@ -1,16 +1,17 @@
 object newlkst: Tnewlkst
-  Left = 0
-  Top = 0
+  Left = 309
+  Top = 372
   Caption = #1057#1086#1079#1076#1072#1085#1080#1077' '#1083#1080#1095#1085#1086#1081' '#1082#1072#1088#1090#1099' '#1089#1090#1091#1076#1077#1085#1090#1072
   ClientHeight = 248
   ClientWidth = 697
-  Color = clBtnFace
+  Color = 10536670
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesigned
   PixelsPerInch = 96
   TextHeight = 19
   object Label1: TLabel

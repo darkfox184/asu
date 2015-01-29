@@ -1,18 +1,17 @@
 object dolgnost: Tdolgnost
-  Left = 0
-  Top = 0
-  BorderStyle = bsDialog
+  Left = 265
+  Top = 326
   Caption = #1053#1072#1089#1090#1088#1086#1082#1072' '#1076#1086#1083#1078#1085#1086#1089#1090#1077#1081' '#1089#1090#1091#1076#1077#1085#1090#1086#1074
-  ClientHeight = 372
-  ClientWidth = 878
-  Color = clBtnFace
+  ClientHeight = 366
+  ClientWidth = 872
+  Color = 12042579
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poDesigned
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19

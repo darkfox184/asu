@@ -1,18 +1,17 @@
 object group: Tgroup
-  Left = 0
-  Top = 0
-  BorderStyle = bsDialog
+  Left = 397
+  Top = 326
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1075#1088#1091#1087#1087
-  ClientHeight = 450
-  ClientWidth = 701
-  Color = clBtnFace
+  ClientHeight = 444
+  ClientWidth = 695
+  Color = 14582128
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poDesigned
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19

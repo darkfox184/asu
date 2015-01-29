@@ -1,18 +1,17 @@
 object Tip_ocenok: TTip_ocenok
-  Left = 0
-  Top = 0
-  BorderStyle = bsDialog
+  Left = 265
+  Top = 326
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1090#1080#1087#1072' '#1086#1094#1077#1085#1082#1080
-  ClientHeight = 373
-  ClientWidth = 867
-  Color = clBtnFace
+  ClientHeight = 367
+  ClientWidth = 861
+  Color = 10536670
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poDesigned
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19

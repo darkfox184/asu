@@ -1,18 +1,17 @@
 object propuskiadd: Tpropuskiadd
   Left = 0
-  Top = 93
-  BorderStyle = bsDialog
+  Top = 279
   Caption = #1055#1088#1086#1087#1091#1089#1082#1080
-  ClientHeight = 547
-  ClientWidth = 1271
-  Color = clBtnFace
+  ClientHeight = 541
+  ClientWidth = 1265
+  Color = 2726300
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poDesigned
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 19

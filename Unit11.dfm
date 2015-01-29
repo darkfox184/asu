@@ -1,18 +1,18 @@
 object kat_rod: Tkat_rod
-  Left = 0
-  Top = 0
+  Left = 309
+  Top = 372
   BorderStyle = bsDialog
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1082#1072#1090#1077#1075#1086#1088#1080#1080' '#1088#1086#1076#1089#1090#1074#1072
-  ClientHeight = 246
+  ClientHeight = 293
   ClientWidth = 879
-  Color = clBtnFace
+  Color = 3246203
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poDesigned
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19

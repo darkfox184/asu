@@ -1,19 +1,18 @@
 object uchplanst: Tuchplanst
-  Left = 0
-  Top = 0
-  BorderStyle = bsDialog
+  Left = 88
+  Top = 186
   BorderWidth = 5
   Caption = #1059#1095#1077#1073#1085#1099#1081' '#1087#1083#1072#1085
-  ClientHeight = 698
-  ClientWidth = 1138
-  Color = clBtnFace
+  ClientHeight = 692
+  ClientWidth = 1132
+  Color = 4361877
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poDesigned
   ShowHint = True
   OnCreate = FormCreate
   PixelsPerInch = 96

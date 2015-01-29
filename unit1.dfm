@@ -1,25 +1,24 @@
 object spstuds: Tspstuds
-  Left = 0
+  Left = 221
   Top = 0
   Hint = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
-  BorderStyle = bsDialog
   Caption = #1057#1087#1080#1089#1086#1082' '#1089#1090#1091#1076#1077#1085#1090#1086#1074
-  ClientHeight = 391
-  ClientWidth = 792
-  Color = clBtnFace
+  ClientHeight = 385
+  ClientWidth = 786
+  Color = 4361877
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poDesigned
   PixelsPerInch = 96
   TextHeight = 19
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 792
+    Width = 786
     Height = 65
     Align = alTop
     TabOrder = 0
@@ -69,7 +68,7 @@ object spstuds: Tspstuds
       Left = 552
       Top = 3
       Width = 233
-      Height = 29
+      Height = 24
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -92,8 +91,8 @@ object spstuds: Tspstuds
   object Panel2: TPanel
     Left = 0
     Top = 65
-    Width = 792
-    Height = 326
+    Width = 786
+    Height = 320
     Align = alClient
     Caption = 'Panel2'
     TabOrder = 1
@@ -101,8 +100,8 @@ object spstuds: Tspstuds
       AlignWithMargins = True
       Left = 4
       Top = 4
-      Width = 784
-      Height = 318
+      Width = 778
+      Height = 312
       Align = alClient
       Color = clBtnFace
       DataSource = DataModule4.spstudsDataSource

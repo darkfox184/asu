@@ -41,11 +41,14 @@ type
     DBGrid2: TDBGrid;
     Button4: TButton;
     Label8: TLabel;
+    Button3: TButton;
+    Print: TFDQuery;
     frxReport1: TfrxReport;
     frxDBDataset1: TfrxDBDataset;
     frxPDFExport1: TfrxPDFExport;
-    Print: TFDQuery;
-    Button3: TButton;
+    frxRTFExport1: TfrxRTFExport;
+    Printo: TFDQuery;
+    frxReport2: TfrxReport;
     procedure DBLookupComboBox1Click(Sender: TObject);
     procedure DBLookupComboBox2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -65,6 +68,7 @@ type
     procedure SELECTE;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button3Click(Sender: TObject);
+    procedure UPDATE_gp_id;
 
 
   private
@@ -91,6 +95,7 @@ FDQuery6.ExecSQL;
 end;
 
 
+
 procedure TOcenivanie.INSERTE;
 begin
 FDquery5.SQL.Clear;
@@ -100,6 +105,7 @@ FDquery5.SQL.Add ('INSERT INTO ocenka (st_id) SELECT id FROM studs WHERE studs.g
 FDQuery5.ParamByName('in2').AsString:=DBLookupComboBox2.KeyValue;
 FDQuery5.ExecSQL;
 end;
+
 
 
 procedure TOcenivanie.UPDATE_pr_id;
@@ -144,6 +150,18 @@ end;
 end;
 
 
+
+
+procedure TOcenivanie.UPDATE_gp_id;
+begin
+FDquery2.SQL.Clear; //  очищаем СКЮЛЬ второго ФДКвери
+FDquery2.SQL.Add ('UPDATE ocenka SET gp_id=:in4');
+FDQuery2.ParamByName('in4').AsString:=DBLookupComboBox2.KeyValue;
+FDQuery2.ExecSQL;
+end;
+
+
+
 procedure TOcenivanie.FILTER;
 begin
 FDQuery6.SQL.Clear;
@@ -161,6 +179,8 @@ FDQuery6.ExecSQL;
 // чистим табл от идентичных записей
 end;
 end;
+
+
 
 procedure TOcenivanie.SELECTE;
 begin
@@ -215,6 +235,7 @@ end;
 end;
 
 
+
 //кнопка Удалить
 procedure TOcenivanie.Button1Click(Sender: TObject);
 begin
@@ -245,7 +266,7 @@ FDQuery4.SQL.Add ('UPDATE ocenka SET name=:name WHERE st_id='+DBGrid1.Fields[0].
 FDQuery4.ParamByName('name').AsString:=DBLookupComboBox5.Text;
 FDQuery4.ExecSQL;
 FDQuery4.SQL.Clear;
-FDQuery4.SQL.Add ('INSERT INTO ocenkanew (id,name,pr_id,mod_id,st_id,tp_id) SELECT * FROM ocenka WHERE name>1');
+FDQuery4.SQL.Add ('INSERT INTO ocenkanew (id,name,pr_id,mod_id,st_id,tp_id,gp_id) SELECT * FROM ocenka WHERE name>1');
 FDQuery4.ExecSQL;
 FDQuery4.SQL.Clear;
 FDQuery4.SQL.Add ('DELETE FROM ocenka WHERE name>1');
@@ -256,41 +277,73 @@ FDQuery7.Refresh;
 end;
 
 
-// ПЕЧАТЬ
+
+ // ПЕЧАТЬ
 procedure TOcenivanie.Button3Click(Sender: TObject);
+begin
+if DBLookupComboBox6.KeyValue=1 then
 begin
 Print.SQL.Clear;
 Print.Active:=false;
 Print.SQL.Add ('DELETE FROM  `printo`');
 Print.ExecSQL;
 Print.SQL.Clear;
-Print.SQL.Add ('INSERT INTO printo (id,pr_id,mod_id,st_id,tp_id) SELECT id,pr_id,mod_id,st_id,tp_id FROM ocenka WHERE pr_id=:in21 AND mod_id=:in22 AND tp_id=:in24 ');
+Print.SQL.Add ('INSERT INTO printo (id,name,pr_id,mod_id,st_id,tp_id,gp_id,fam) SELECT ocenkanew.*,studs.fam FROM ocenkanew LEFT JOIN studs ON studs.id=st_id WHERE ocenkanew.pr_id=:in21 AND ocenkanew.mod_id=:in22 AND ocenkanew.tp_id=:in24 AND ocenkanew.gp_id=:in2');
+Print.ParamByName('in2').AsString:= DBLookupComboBox2.KeyValue;
 Print.ParamByName('in21').AsString:= DBLookupComboBox3.KeyValue;
 Print.ParamByName('in22').AsString:= DBLookupComboBox4.KeyValue;
 Print.ParamByName('in24').AsString:= DBLookupComboBox6.KeyValue;
 Print.ExecSQL;
-Print.Active:=true;
-FrxReport1.ShowReport;
-                                         (*
-if DBLookupComboBox6.KeyValue=1 then
-begin
-Print.SQL.Add ('INSERT INTO printo(id,pr_id,mod_id ,st_id,tp_id) SELECT name,pr_id, mod_id , st_id, tp_id FROM ocenka, ocenkanew WHERE ocenkanew.pr_id=:in21 AND ocenkanew.mod_id=:in22 AND ocenkanew.st_id=:in23 AND ocenkanew.tp_id=:in24');
-Print.ParamByName('in21').AsString:= DBLookupComboBox3.Text;
-Print.ParamByName('in23').AsString:= DBGrid1.Fields[0].AsString;
-Print.ParamByName('in24').AsString:= DBLookupComboBox6.Text;
-Print.ParamByName('in22').AsString:= DBLookupComboBox6.KeyField;
-//Print.ParamByName('in25').AsString:= DBGrid2.Fields[2].AsString;
+Print.SQL.Clear;
+Print.SQL.Add ('INSERT INTO printo (id,name,pr_id,mod_id,st_id,tp_id,gp_id,fam) SELECT ocenka.*,studs.fam FROM ocenka LEFT JOIN studs ON studs.id=st_id WHERE ocenka.pr_id=:in21 AND ocenka.mod_id=:in22 AND ocenka.tp_id=:in24 AND ocenka.gp_id=:in2');
+Print.ParamByName('in2').AsString:= DBLookupComboBox2.KeyValue;
+Print.ParamByName('in21').AsString:= DBLookupComboBox3.KeyValue;
+Print.ParamByName('in22').AsString:= DBLookupComboBox4.KeyValue;
+Print.ParamByName('in24').AsString:= DBLookupComboBox6.KeyValue;
+Print.ExecSQL;
+Print.SQL.Clear;
+Print.SQL.Add ('UPDATE printo SET pr_id=:pr_id, tp_id=:tp_id,mod_id=:mod_id,gp_id=:gp_id');
+Print.ParamByName('pr_id').AsString:= DBLookupComboBox3.Text;
+Print.ParamByName('tp_id').AsString:= DBLookupComboBox6.Text;
+Print.ParamByName('mod_id').AsString:= DBLookupComboBox4.Text;
+Print.ParamByName('gp_id').AsString:= DBLookupComboBox2.Text;
+Print.ExecSQL;
+ printo.Active:=True;
+ Printo.Refresh;
+ FrxReport1.ShowReport;
 end;
 if DBLookupComboBox6.KeyValue>1 then
 begin
-Print.SQL.Add ('INSERT INTO printo(id,name, pr_id, mod_id , st_id, tp_id) SELECT ocenka.name ,ocenkanew.name,ocenka.st_id,ocenkanew.pr_id,ocenkanew.mod_id,ocenkanew.st_id,ocenkanew.tp_id FROM ocenka, ocenkanew WHERE ocenkanew.pr_id=:in21 AND ocenkanew.st_id=:in23 AND ocenkanew.tp_id=:in24 AND pr_id=:in21');
-Print.ParamByName('in21').AsString:= DBLookupComboBox3.Text;
-Print.ParamByName('in23').AsString:= DBGrid1.Fields[0].AsString;
-Print.ParamByName('in24').AsString:= DBLookupComboBox6.Text;
-//Print.ParamByName('in25').AsString:= DBGrid2.Fields[2].Text;
+Print.SQL.Clear;
+Print.Active:=false;
+Print.SQL.Add ('DELETE FROM  `printo`');
+Print.ExecSQL;
+Print.SQL.Clear;
+Print.SQL.Add ('INSERT INTO printo (id,name,pr_id,mod_id,st_id,tp_id,gp_id,fam) SELECT ocenkanew.*,studs.fam FROM ocenkanew LEFT JOIN studs ON studs.id=st_id WHERE ocenkanew.pr_id=:in21 AND ocenkanew.tp_id=:in24 AND ocenkanew.gp_id=:in2');
+Print.ParamByName('in2').AsString:= DBLookupComboBox2.KeyValue;
+Print.ParamByName('in21').AsString:= DBLookupComboBox3.KeyValue;
+Print.ParamByName('in24').AsString:= DBLookupComboBox6.KeyValue;
+Print.ExecSQL;
+Print.SQL.Clear;
+Print.SQL.Add ('INSERT INTO printo (id,name,pr_id,mod_id,st_id,tp_id,gp_id,fam) SELECT ocenka.*,studs.fam FROM ocenka LEFT JOIN studs ON studs.id=st_id WHERE ocenka.pr_id=:in21 AND ocenka.tp_id=:in24 AND ocenka.gp_id=:in2');
+Print.ParamByName('in2').AsString:= DBLookupComboBox2.KeyValue;
+Print.ParamByName('in21').AsString:= DBLookupComboBox3.KeyValue;
+Print.ParamByName('in24').AsString:= DBLookupComboBox6.KeyValue;
+Print.ExecSQL;
+Print.SQL.Clear;
+Print.SQL.Add ('UPDATE printo SET pr_id=:pr_id, tp_id=:tp_id,gp_id=:gp_id');
+Print.ParamByName('pr_id').AsString:= DBLookupComboBox3.Text;
+Print.ParamByName('tp_id').AsString:= DBLookupComboBox6.Text;
+Print.ParamByName('gp_id').AsString:= DBLookupComboBox2.Text;
+Print.ExecSQL;
+ printo.Active:=True;
+ Printo.Refresh;
+ FrxReport2.ShowReport;
 end;
-                                         *)
+
 end;
+
+
 
 //КНОПКА ИЗМЕНИТЬ
 procedure TOcenivanie.Button4Click(Sender: TObject);
@@ -304,9 +357,11 @@ end;
 
 
 
+
 //В Ы Б О Р   С П Е Ц И А Л Ь Н О С Т И
 procedure TOcenivanie.DBLookupComboBox1Click(Sender: TObject);
 begin
+//DBLookupComboBox1.Color:=clMoneyGreen;
 DBLookupComboBox2.Enabled:=true;
 if (DBLookupComboBox1.KeyValue>0) and (DBLookupComboBox2.KeyValue>0)
 and (DBLookupComboBox3.KeyValue>0) and (DBLookupComboBox6.KeyValue>0)
@@ -337,12 +392,14 @@ DataModule4.DataSourcedsp.DataSet:=DataModule4.Querydsp_uchp;
 end;
 
 
+
 //В Ы Б О Р    Г Р У П П Ы
 procedure TOcenivanie.DBLookupComboBox2Click(Sender: TObject);
 begin
 DBLookupComboBox3.Enabled:=true;
 ALL_DELETE;
 INSERTE;
+UPDATE_gp_id;
 if DBLookupComboBox3.KeyValue>0 then
 begin
 UPDATE_pr_id;
@@ -373,6 +430,7 @@ DBLookupComboBox2.KeyField:='id'; //ключевое поле
 end;
 
 
+
 //В Ы Б О Р    П Р Е Д М Е Т А
 procedure TOcenivanie.DBLookupComboBox3Click(Sender: TObject);
 begin
@@ -380,6 +438,7 @@ DBLookupComboBox6.Enabled:=true;
 ALL_DELETE;
 INSERTE;
 UPDATE_pr_id;
+UPDATE_gp_id;
 if DBLookupComboBox6.KeyValue>0 then
 begin
 UPDATE_tp_id;
@@ -410,6 +469,7 @@ begin
 ALL_DELETE;
 INSERTE;
 UPDATE_pr_id;
+UPDATE_gp_id;
 if DBLookupComboBox6.KeyValue>0 then
 begin
 UPDATE_tp_id;
@@ -423,6 +483,7 @@ DBGrid2.Visible:=True;
 FDQuery2.Refresh;
 FDQuery7.Refresh;
 end;
+
 
 
 //В Ы Б О Р    Т И П А    О Ц Е Н К И
@@ -458,6 +519,7 @@ DBLookupComboBox4.KeyValue:=-1;
 ALL_DELETE;
 INSERTE;
 UPDATE_pr_id;
+UPDATE_gp_id;
 if DBLookupComboBox6.KeyValue>0 then
 begin
 UPDATE_tp_id;
@@ -471,8 +533,10 @@ end;
 end;
 
 
+
 procedure TOcenivanie.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
+ALL_DELETE;
 DBLookupComboBox1.KeyValue:=-1;
 DBLookupComboBox2.KeyValue:=-1;
 DBLookupComboBox3.KeyValue:=-1;
@@ -485,6 +549,8 @@ DBLookupComboBox6.Enabled:=false;
 DBGrid1.Visible:=False; // OFF таблицы
 DBGrid2.Visible:=False; // OFF таблицы
 end;
+
+
 
 procedure TOcenivanie.FormCreate(Sender: TObject);
 begin
@@ -505,6 +571,7 @@ DataModule4.Sourcesitoceok.Enabled:=true;
 DataModule4.Sourcesitoceok.DataSet:=DataModule4.Querysitoceok;
 end;
 end;
+
 
 
 procedure TOcenivanie.sistemClick(Sender: TObject);

@@ -7,7 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
-  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Unit4;
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Unit4,
+  Vcl.Mask, Vcl.DBCtrls;
 
 type
   TSpecialnost = class(TForm)
@@ -19,8 +20,8 @@ type
     FDQuery3: TFDQuery;
     Button2: TButton;
     Label1: TLabel;
-    Edit1: TEdit;
     addsp: TButton;
+    DBEdit1: TDBEdit;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -44,10 +45,10 @@ procedure TSpecialnost.addspClick(Sender: TObject);
 begin
 FDQuery3.SQL.Clear;
 FDQuery3.SQL.Add ('INSERT INTO spec (name) VALUES (:name)');
-FDQuery3.ParamByName('name').AsString:=Edit1.Text;
+FDQuery3.ParamByName('name').AsString:=DBEdit1.Text;
 FDQuery3.ExecSQL;
 FDQuery1.Refresh;
-Edit1.Clear;
+DBEdit1.Clear;
 end;
 
 procedure TSpecialnost.Button1Click(Sender: TObject);
