@@ -3,9 +3,9 @@ object Specialnost: TSpecialnost
   Top = 372
   BorderStyle = bsDialog
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1089#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1077#1081
-  ClientHeight = 290
+  ClientHeight = 249
   ClientWidth = 846
-  Color = 14582128
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16

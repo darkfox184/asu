@@ -4,7 +4,7 @@ object kartastud: Tkartastud
   Caption = #1051#1080#1095#1085#1072#1103' '#1082#1072#1088#1090#1072' '#1089#1090#1091#1076#1077#1085#1090#1072
   ClientHeight = 528
   ClientWidth = 844
-  Color = 14582128
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16

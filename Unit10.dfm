@@ -3,9 +3,9 @@ object Redak: TRedak
   Top = 465
   BorderStyle = bsDialog
   Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077
-  ClientHeight = 120
-  ClientWidth = 443
-  Color = 12623247
+  ClientHeight = 112
+  ClientWidth = 432
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16

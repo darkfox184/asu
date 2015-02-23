@@ -24,7 +24,6 @@ type
     Button3: TButton;
     DBGrid2: TDBGrid;
     Button4: TButton;
-    Button5: TButton;
     RadioGroup1: TRadioGroup;
     DateTimePicker1: TDateTimePicker;
     Label4: TLabel;
@@ -38,7 +37,6 @@ type
     Edit1: TEdit;
     Label5: TLabel;
     GroupBox1: TGroupBox;
-    CheckBox1: TCheckBox;
     CheckBox2: TCheckBox;
     CheckBox3: TCheckBox;
     CheckBox4: TCheckBox;
@@ -220,9 +218,6 @@ FDQuery4.ParamByName('koll').AsString:=Edit1.Text;
 FDQuery4.ExecSQL;
 FDQuery3.Refresh;
 end;
-
-
-
 
 procedure Tpropuskiadd.DateTimePicker1Change(Sender: TObject);
 begin

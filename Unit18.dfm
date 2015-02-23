@@ -2,9 +2,9 @@ object Redak_2: TRedak_2
   Left = 309
   Top = 372
   Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077' '#1083#1080#1095#1085#1086#1081' '#1082#1072#1088#1090#1099' '#1088#1086#1076#1080#1090#1077#1083#1103
-  ClientHeight = 312
+  ClientHeight = 288
   ClientWidth = 696
-  Color = 12623247
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -224,7 +224,7 @@ object Redak_2: TRedak_2
   end
   object Button2: TButton
     Left = 591
-    Top = 275
+    Top = 256
     Width = 97
     Height = 29
     Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100

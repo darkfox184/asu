@@ -1,10 +1,10 @@
 object dolgnost: Tdolgnost
-  Left = 265
-  Top = 326
+  Left = 244
+  Top = 219
   Caption = #1053#1072#1089#1090#1088#1086#1082#1072' '#1076#1086#1083#1078#1085#1086#1089#1090#1077#1081' '#1089#1090#1091#1076#1077#1085#1090#1086#1074
-  ClientHeight = 366
-  ClientWidth = 872
-  Color = 12042579
+  ClientHeight = 235
+  ClientWidth = 843
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16

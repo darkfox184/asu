@@ -25,9 +25,6 @@ Coordinates=535,210,91,58
 [DBGrid1]
 Coordinates=84,550,64,36
 
-[Button5]
-Coordinates=380,10,59,58
-
 [DBGrid2]
 Coordinates=10,550,64,36
 
@@ -168,5 +165,5 @@ Coordinates=344,414,73,58
 Coordinates=707,346,195,58
 
 []
-Coordinates=1110,617,91,36
+Coordinates=380,10,59,58
 

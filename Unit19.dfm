@@ -1,11 +1,11 @@
 object Ocenivanie: TOcenivanie
   AlignWithMargins = True
-  Left = 44
-  Top = 279
+  Left = 146
+  Top = 110
   Caption = #1054#1094#1077#1085#1080#1074#1072#1085#1080#1077
-  ClientHeight = 528
-  ClientWidth = 1186
-  Color = clSkyBlue
+  ClientHeight = 386
+  ClientWidth = 1178
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
@@ -114,7 +114,6 @@ object Ocenivanie: TOcenivanie
     Top = 33
     Width = 409
     Height = 29
-    Color = clMoneyGreen
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -133,7 +132,6 @@ object Ocenivanie: TOcenivanie
     Top = 90
     Width = 192
     Height = 29
-    Color = clMoneyGreen
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -147,7 +145,7 @@ object Ocenivanie: TOcenivanie
     Left = 8
     Top = 8
     Width = 378
-    Height = 348
+    Height = 338
     Color = clWhite
     DataSource = DataSource1
     GradientStartColor = clCream
@@ -195,7 +193,6 @@ object Ocenivanie: TOcenivanie
     Top = 148
     Width = 409
     Height = 29
-    Color = clMoneyGreen
     Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -214,7 +211,6 @@ object Ocenivanie: TOcenivanie
     Top = 266
     Width = 409
     Height = 29
-    Color = clMoneyGreen
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -249,7 +245,6 @@ object Ocenivanie: TOcenivanie
     Top = 352
     Width = 232
     Height = 29
-    Color = clTeal
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -263,7 +258,7 @@ object Ocenivanie: TOcenivanie
   end
   object Button1: TButton
     Left = 1001
-    Top = 352
+    Top = 351
     Width = 170
     Height = 29
     Caption = #1059#1076#1072#1083#1080#1090#1100
@@ -279,7 +274,7 @@ object Ocenivanie: TOcenivanie
   object Button2: TButton
     Left = 640
     Top = 352
-    Width = 170
+    Width = 171
     Height = 29
     Caption = #1054#1094#1077#1085#1080#1090#1100
     Font.Charset = DEFAULT_CHARSET
@@ -296,7 +291,6 @@ object Ocenivanie: TOcenivanie
     Top = 206
     Width = 192
     Height = 27
-    Color = clMoneyGreen
     Enabled = False
     KeyField = 'id'
     ListField = 'name'
@@ -348,7 +342,7 @@ object Ocenivanie: TOcenivanie
   end
   object Button4: TButton
     Left = 825
-    Top = 352
+    Top = 351
     Width = 170
     Height = 29
     Caption = #1048#1079#1084#1077#1085#1080#1090#1100
@@ -356,10 +350,10 @@ object Ocenivanie: TOcenivanie
     OnClick = Button4Click
   end
   object Button3: TButton
-    Left = 544
-    Top = 416
-    Width = 75
-    Height = 25
+    Left = 8
+    Top = 352
+    Width = 378
+    Height = 29
     Caption = #1055#1077#1095#1072#1090#1100
     TabOrder = 12
     OnClick = Button3Click
@@ -429,7 +423,7 @@ object Ocenivanie: TOcenivanie
     Top = 416
   end
   object frxReport1: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -685,7 +679,6 @@ object Ocenivanie: TOcenivanie
     Top = 408
   end
   object Printo: TFDQuery
-    Active = True
     Connection = DataModule4.FDConnection1
     SQL.Strings = (
       'select * from printo')
@@ -693,7 +686,7 @@ object Ocenivanie: TOcenivanie
     Top = 416
   end
   object frxReport2: TfrxReport
-    Version = '5.1.5'
+    Version = '5.2.3'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]

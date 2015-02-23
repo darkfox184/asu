@@ -65,6 +65,7 @@ FDQuery1.ExecSQL;
 Edit1.Clear;
 Edit2.Clear;
 Edit3.Clear;
+addstuds.Close;
 
 DataModule4.FDQuery15.Refresh;
 

@@ -2,9 +2,9 @@ object Tip_ocenok: TTip_ocenok
   Left = 265
   Top = 326
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1090#1080#1087#1072' '#1086#1094#1077#1085#1082#1080
-  ClientHeight = 367
-  ClientWidth = 861
-  Color = 10536670
+  ClientHeight = 235
+  ClientWidth = 842
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16

@@ -2,9 +2,9 @@ object red_ks: Tred_ks
   Left = 309
   Top = 372
   Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100' '#1083#1080#1095#1085#1091#1102' '#1082#1072#1088#1090#1091' '#1089#1090#1091#1076#1077#1085#1090#1072
-  ClientHeight = 265
-  ClientWidth = 714
-  Color = 12623247
+  ClientHeight = 249
+  ClientWidth = 692
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

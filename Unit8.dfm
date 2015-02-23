@@ -4,7 +4,7 @@ object newlkrod: Tnewlkrod
   Caption = #1057#1086#1079#1076#1072#1085#1080#1077' '#1083#1080#1095#1085#1086#1081' '#1082#1072#1088#1090#1099' '#1088#1086#1076#1080#1090#1077#1083#1077#1081
   ClientHeight = 287
   ClientWidth = 693
-  Color = 12042579
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16

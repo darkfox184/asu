@@ -36,6 +36,8 @@ type
     procedure DBLookupComboBox1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Edit1Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,8 +58,10 @@ FDQuery3.SQL.Add ('INSERT INTO groups (name,sp_id) VALUES (:name,:sp_id)');
 FDQuery3.ParamByName('name').AsString:=Edit1.Text;
 FDQuery3.ParamByName('sp_id').AsString:=DBLookupComboBox1.KeyValue;
 FDQuery3.ExecSQL;
-FDQuery1.Refresh;
 Edit1.Clear;
+DBLookupComboBox1.KeyValue:=-1;
+DataSource2.DataSet:=FDQuery1;
+FDQuery1.Refresh;
 end;
 
 procedure Tgroup.Button2Click(Sender: TObject);
@@ -68,6 +72,7 @@ FDQuery5.ParamByName('name').AsString:=Edit2.Text;
 FDQuery5.ParamByName('id').AsString:=DBGrid1.Fields[0].AsString;
 FDQuery5.ExecSQL;
 FDQuery1.Refresh;
+Edit2.Clear;
 end;
 
 procedure Tgroup.Button1Click(Sender: TObject);
@@ -76,8 +81,11 @@ FDQuery2.SQL.Clear;
 FDQuery2.SQL.Add ('DELETE FROM groups  WHERE id=:id');
 FDQuery2.ParamByName('id').AsString:=DBGrid1.Fields[0].AsString;
 FDQuery2.ExecSQL;
+DataSource2.DataSet:=FDQuery1;
 FDQuery1.Refresh;
+Edit2.Clear;
 end;
+
 
 procedure Tgroup.DBGrid1CellClick(Column: TColumn);
 begin
@@ -86,17 +94,33 @@ end;
 
 procedure Tgroup.DBLookupComboBox1Click(Sender: TObject);
 begin
-FDquery1.SQL.Clear;
-FDquery1.SQL.Add ('select * from groups WHERE sp_id= :in2 ');
-FDQuery1.ParamByName('in2').AsString:=DBLookupComboBox1.KeyValue;
-FDQuery1.Open;
-DataSource2.DataSet:=FDQuery1;
+FDquery3.SQL.Clear;
+FDquery3.SQL.Add ('select * from groups WHERE sp_id= :in2 ');
+FDQuery3.ParamByName('in2').AsString:=DBLookupComboBox1.KeyValue;
+FDQuery3.Open;
+DataSource2.DataSet:=FDQuery3;
+addsp.Enabled:=true;
+end;
+
+
+procedure Tgroup.Edit1Change(Sender: TObject);
+begin
+if Edit1.Focused then
+addsp.Enabled:=true;
+end;
+
+procedure Tgroup.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+DBLookupComboBox1.KeyValue:=-1;
+FDQuery1.Refresh;
 end;
 
 procedure Tgroup.FormCreate(Sender: TObject);
 begin
 FDQuery1.Active:=true;
 FDQuery4.Active:=true;
+FDQuery1.Refresh;
+FDQuery4.Refresh;
 end;
 
 end.

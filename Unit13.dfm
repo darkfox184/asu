@@ -1,10 +1,10 @@
 object group: Tgroup
-  Left = 397
-  Top = 326
+  Left = 342
+  Top = 219
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1075#1088#1091#1087#1087
-  ClientHeight = 444
-  ClientWidth = 695
-  Color = 14582128
+  ClientHeight = 265
+  ClientWidth = 674
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
@@ -12,6 +12,7 @@ object group: Tgroup
   Font.Style = []
   OldCreateOrder = False
   Position = poDesigned
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19
@@ -56,7 +57,7 @@ object group: Tgroup
   end
   object Label4: TLabel
     Left = 354
-    Top = 149
+    Top = 160
     Width = 170
     Height = 19
     Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100' '#1075#1088#1091#1087#1087#1091':'
@@ -72,7 +73,7 @@ object group: Tgroup
     Left = 8
     Top = 33
     Width = 305
-    Height = 220
+    Height = 228
     DataSource = DataSource2
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     ReadOnly = True
@@ -99,9 +100,9 @@ object group: Tgroup
       end>
   end
   object Button1: TButton
-    Left = 511
-    Top = 216
-    Width = 80
+    Left = 519
+    Top = 230
+    Width = 147
     Height = 31
     Caption = #1059#1076#1072#1083#1080#1090#1100
     TabOrder = 1
@@ -109,8 +110,8 @@ object group: Tgroup
   end
   object Button2: TButton
     Left = 354
-    Top = 216
-    Width = 131
+    Top = 230
+    Width = 147
     Height = 31
     Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
     TabOrder = 2
@@ -122,13 +123,15 @@ object group: Tgroup
     Width = 312
     Height = 27
     TabOrder = 3
+    OnChange = Edit1Change
   end
   object addsp: TButton
-    Left = 584
+    Left = 519
     Top = 123
-    Width = 81
+    Width = 147
     Height = 31
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    Enabled = False
     TabOrder = 4
     OnClick = addspClick
   end
@@ -145,7 +148,7 @@ object group: Tgroup
   end
   object Edit2: TEdit
     Left = 354
-    Top = 174
+    Top = 185
     Width = 312
     Height = 27
     TabOrder = 6
@@ -156,6 +159,7 @@ object group: Tgroup
     Top = 256
   end
   object FDQuery1: TFDQuery
+    Active = True
     Connection = DataModule4.FDConnection1
     SQL.Strings = (
       'SELECT * FROM asu.groups;')
@@ -173,6 +177,7 @@ object group: Tgroup
     Top = 256
   end
   object FDQuery4: TFDQuery
+    Active = True
     Connection = DataModule4.FDConnection1
     SQL.Strings = (
       'SELECT * FROM asu.spec;')

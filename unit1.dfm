@@ -5,7 +5,7 @@ object spstuds: Tspstuds
   Caption = #1057#1087#1080#1089#1086#1082' '#1089#1090#1091#1076#1077#1085#1090#1086#1074
   ClientHeight = 385
   ClientWidth = 786
-  Color = 4361877
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
@@ -22,6 +22,7 @@ object spstuds: Tspstuds
     Height = 65
     Align = alTop
     TabOrder = 0
+    ExplicitTop = -2
     object Label1: TLabel
       Left = 8
       Top = 8

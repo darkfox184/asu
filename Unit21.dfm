@@ -1,10 +1,10 @@
 object propuskiadd: Tpropuskiadd
   Left = 0
-  Top = 279
+  Top = 110
   Caption = #1055#1088#1086#1087#1091#1089#1082#1080
-  ClientHeight = 541
-  ClientWidth = 1265
-  Color = 2726300
+  ClientHeight = 506
+  ClientWidth = 1273
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
@@ -123,7 +123,7 @@ object propuskiadd: Tpropuskiadd
     Left = 7
     Top = 33
     Width = 378
-    Height = 393
+    Height = 463
     DataSource = DataSource1
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     ReadOnly = True
@@ -196,7 +196,7 @@ object propuskiadd: Tpropuskiadd
   end
   object Button3: TButton
     Left = 402
-    Top = 502
+    Top = 460
     Width = 170
     Height = 36
     Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
@@ -213,7 +213,7 @@ object propuskiadd: Tpropuskiadd
     Left = 829
     Top = 31
     Width = 436
-    Height = 395
+    Height = 465
     Margins.Left = 2
     Margins.Top = 2
     Margins.Right = 2
@@ -282,15 +282,6 @@ object propuskiadd: Tpropuskiadd
     TabOrder = 7
     OnClick = Button4Click
   end
-  object Button5: TButton
-    Left = 641
-    Top = 502
-    Width = 170
-    Height = 36
-    Caption = #1054#1090#1084#1077#1085#1080#1090#1100
-    TabOrder = 8
-    Visible = False
-  end
   object RadioGroup1: TRadioGroup
     Left = 402
     Top = 216
@@ -300,7 +291,7 @@ object propuskiadd: Tpropuskiadd
     Items.Strings = (
       #1059#1074#1072#1078#1080#1090#1077#1083#1100#1085#1072#1103
       #1053#1077#1091#1074#1072#1078#1080#1090#1077#1083#1100#1085#1072#1103)
-    TabOrder = 9
+    TabOrder = 8
   end
   object DateTimePicker1: TDateTimePicker
     Left = 402
@@ -314,7 +305,7 @@ object propuskiadd: Tpropuskiadd
     ParentDoubleBuffered = False
     ParentShowHint = False
     ShowHint = False
-    TabOrder = 10
+    TabOrder = 9
     OnChange = DateTimePicker1Change
   end
   object Edit1: TEdit
@@ -322,7 +313,7 @@ object propuskiadd: Tpropuskiadd
     Top = 183
     Width = 39
     Height = 27
-    TabOrder = 11
+    TabOrder = 10
   end
   object GroupBox1: TGroupBox
     Left = 402
@@ -330,22 +321,14 @@ object propuskiadd: Tpropuskiadd
     Width = 408
     Height = 93
     Caption = #1055#1088#1086#1087#1091#1097#1077#1085#1085#1099#1077' '#1087#1072#1088#1099':'
-    TabOrder = 12
-    object CheckBox1: TCheckBox
-      Left = 232
-      Top = 73
-      Width = 49
-      Height = 17
-      Caption = 'CheckBox1'
-      TabOrder = 0
-    end
+    TabOrder = 11
     object CheckBox2: TCheckBox
       Left = 17
       Top = 32
       Width = 97
       Height = 17
       Caption = '1 '#1087#1072#1088#1072
-      TabOrder = 1
+      TabOrder = 0
     end
     object CheckBox3: TCheckBox
       Left = 16
@@ -353,7 +336,7 @@ object propuskiadd: Tpropuskiadd
       Width = 97
       Height = 17
       Caption = '2 '#1087#1072#1088#1072
-      TabOrder = 2
+      TabOrder = 1
     end
     object CheckBox4: TCheckBox
       Left = 128
@@ -361,7 +344,7 @@ object propuskiadd: Tpropuskiadd
       Width = 97
       Height = 17
       Caption = '3 '#1087#1072#1088#1072
-      TabOrder = 3
+      TabOrder = 2
     end
     object CheckBox5: TCheckBox
       Left = 129
@@ -369,7 +352,7 @@ object propuskiadd: Tpropuskiadd
       Width = 97
       Height = 17
       Caption = '4 '#1087#1072#1088#1072
-      TabOrder = 4
+      TabOrder = 3
     end
     object CheckBox6: TCheckBox
       Left = 248
@@ -377,7 +360,7 @@ object propuskiadd: Tpropuskiadd
       Width = 97
       Height = 17
       Caption = '5 '#1087#1072#1088#1072
-      TabOrder = 5
+      TabOrder = 4
     end
   end
   object DataSource1: TDataSource
