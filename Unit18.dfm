@@ -2,8 +2,8 @@ object Redak_2: TRedak_2
   Left = 309
   Top = 372
   Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077' '#1083#1080#1095#1085#1086#1081' '#1082#1072#1088#1090#1099' '#1088#1086#1076#1080#1090#1077#1083#1103
-  ClientHeight = 288
-  ClientWidth = 696
+  ClientHeight = 217
+  ClientWidth = 635
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,12 +11,12 @@ object Redak_2: TRedak_2
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poMainFormCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Label7: TLabel
-    Left = 16
-    Top = 56
+    Left = 8
+    Top = 41
     Width = 56
     Height = 19
     Caption = #1060'.'#1048'.'#1054'.:'
@@ -28,8 +28,8 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object mestorab: TLabel
-    Left = 16
-    Top = 96
+    Left = 8
+    Top = 75
     Width = 109
     Height = 19
     Caption = #1052#1077#1089#1090#1086' '#1088#1072#1073#1086#1090#1099':'
@@ -41,11 +41,11 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 16
-    Top = 186
-    Width = 151
+    Left = 8
+    Top = 151
+    Width = 71
     Height = 19
-    Caption = #1058#1077#1083#1077#1092#1086#1085' '#1076#1086#1084#1072#1096#1085#1080#1081':'
+    Caption = #1058#1077#1083#1077#1092#1086#1085':'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -54,8 +54,8 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object Label9: TLabel
-    Left = 368
-    Top = 186
+    Left = 311
+    Top = 151
     Width = 138
     Height = 19
     Caption = #1058#1077#1083#1077#1092#1086#1085' '#1088#1072#1073#1086#1095#1080#1081':'
@@ -67,8 +67,8 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object Label10: TLabel
-    Left = 16
-    Top = 136
+    Left = 8
+    Top = 112
     Width = 88
     Height = 19
     Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100':'
@@ -80,11 +80,11 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object Label11: TLabel
-    Left = 16
-    Top = 226
-    Width = 129
+    Left = 8
+    Top = 191
+    Width = 50
     Height = 19
-    Caption = #1044#1086#1084#1072#1096#1085#1080#1081' '#1072#1076#1088#1077#1089':'
+    Caption = #1040#1076#1088#1077#1089':'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -93,8 +93,8 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object Label12: TLabel
-    Left = 512
-    Top = 91
+    Left = 460
+    Top = 41
     Width = 129
     Height = 19
     Caption = #1057#1090#1077#1087#1077#1085#1100' '#1088#1086#1076#1089#1090#1074#1072':'
@@ -106,7 +106,7 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object Label13: TLabel
-    Left = 16
+    Left = 8
     Top = 8
     Width = 75
     Height = 19
@@ -119,7 +119,7 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object Label14: TLabel
-    Left = 372
+    Left = 460
     Top = 8
     Width = 24
     Height = 19
@@ -132,7 +132,7 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object fiol: TLabel
-    Left = 96
+    Left = 88
     Top = 8
     Width = 21
     Height = 19
@@ -145,7 +145,7 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object nomer: TLabel
-    Left = 402
+    Left = 490
     Top = 8
     Width = 52
     Height = 19
@@ -158,8 +158,8 @@ object Redak_2: TRedak_2
     ParentFont = False
   end
   object Edit1: TEdit
-    Left = 173
-    Top = 178
+    Left = 125
+    Top = 143
     Width = 180
     Height = 27
     Font.Charset = DEFAULT_CHARSET
@@ -171,8 +171,8 @@ object Redak_2: TRedak_2
     TabOrder = 0
   end
   object Edit2: TEdit
-    Left = 78
-    Top = 47
+    Left = 70
+    Top = 33
     Width = 372
     Height = 27
     Font.Charset = DEFAULT_CHARSET
@@ -184,8 +184,8 @@ object Redak_2: TRedak_2
     TabOrder = 1
   end
   object Edit3: TEdit
-    Left = 131
-    Top = 88
+    Left = 125
+    Top = 67
     Width = 317
     Height = 27
     Font.Charset = DEFAULT_CHARSET
@@ -197,8 +197,8 @@ object Redak_2: TRedak_2
     TabOrder = 2
   end
   object Edit4: TEdit
-    Left = 131
-    Top = 134
+    Left = 125
+    Top = 104
     Width = 317
     Height = 27
     Font.Charset = DEFAULT_CHARSET
@@ -210,9 +210,9 @@ object Redak_2: TRedak_2
     TabOrder = 3
   end
   object Edit5: TEdit
-    Left = 180
-    Top = 223
-    Width = 508
+    Left = 125
+    Top = 183
+    Width = 317
     Height = 27
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -223,9 +223,9 @@ object Redak_2: TRedak_2
     TabOrder = 4
   end
   object Button2: TButton
-    Left = 591
-    Top = 256
-    Width = 97
+    Left = 460
+    Top = 181
+    Width = 169
     Height = 29
     Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
     Font.Charset = DEFAULT_CHARSET
@@ -238,8 +238,8 @@ object Redak_2: TRedak_2
     OnClick = Button2Click
   end
   object fam_id: TDBLookupComboBox
-    Left = 519
-    Top = 134
+    Left = 460
+    Top = 67
     Width = 169
     Height = 27
     Font.Charset = DEFAULT_CHARSET
@@ -254,8 +254,8 @@ object Redak_2: TRedak_2
     TabOrder = 6
   end
   object Edit6: TEdit
-    Left = 512
-    Top = 178
+    Left = 460
+    Top = 143
     Width = 169
     Height = 27
     Font.Charset = DEFAULT_CHARSET

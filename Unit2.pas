@@ -45,6 +45,10 @@ type
     procedure N19Click(Sender: TObject);
     procedure N16Click(Sender: TObject);
     procedure N17Click(Sender: TObject);
+    procedure N5Click(Sender: TObject);
+    procedure N14Click(Sender: TObject);
+    procedure N15Click(Sender: TObject);
+    procedure N18Click(Sender: TObject);
  
     { Private declarations }
   public
@@ -72,6 +76,16 @@ begin
 kat_rod.show;
 end;
 
+procedure Tmain.N14Click(Sender: TObject);
+begin
+ShowMessage('Операция не возможна. Действие не добавлено!');
+end;
+
+procedure Tmain.N15Click(Sender: TObject);
+begin
+ShowMessage('Операция не возможна. Действие не добавлено!');
+end;
+
 procedure Tmain.N16Click(Sender: TObject);
 begin
 Ocenivanie.show;
@@ -82,9 +96,19 @@ begin
 propuskiadd.show;
 end;
 
+procedure Tmain.N18Click(Sender: TObject);
+begin
+ShowMessage('Операция не возможна. Действие не добавлено!');
+end;
+
 procedure Tmain.N19Click(Sender: TObject);
 begin
 uchplanst.show;
+end;
+
+procedure Tmain.N5Click(Sender: TObject);
+begin
+ShowMessage('Операция не возможна. Действие не добавлено!');
 end;
 
 procedure Tmain.N6Click(Sender: TObject);

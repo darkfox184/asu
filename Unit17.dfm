@@ -2,8 +2,8 @@ object red_ks: Tred_ks
   Left = 309
   Top = 372
   Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100' '#1083#1080#1095#1085#1091#1102' '#1082#1072#1088#1090#1091' '#1089#1090#1091#1076#1077#1085#1090#1072
-  ClientHeight = 249
-  ClientWidth = 692
+  ClientHeight = 170
+  ClientWidth = 688
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,12 +11,12 @@ object red_ks: Tred_ks
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poMainFormCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 24
-    Top = 48
+    Left = 8
+    Top = 41
     Width = 50
     Height = 19
     Caption = #1040#1076#1088#1077#1089':'
@@ -28,8 +28,8 @@ object red_ks: Tred_ks
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 24
-    Top = 88
+    Left = 8
+    Top = 77
     Width = 71
     Height = 19
     Caption = #1058#1077#1083#1077#1092#1086#1085':'
@@ -41,8 +41,8 @@ object red_ks: Tred_ks
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 24
-    Top = 128
+    Left = 8
+    Top = 110
     Width = 177
     Height = 19
     Caption = #1057#1077#1088#1080#1103', '#1085#1086#1084#1077#1088' '#1087#1072#1089#1087#1086#1088#1090#1072':'
@@ -54,8 +54,8 @@ object red_ks: Tred_ks
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 376
-    Top = 48
+    Left = 368
+    Top = 41
     Width = 119
     Height = 19
     Caption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103':'
@@ -67,8 +67,8 @@ object red_ks: Tred_ks
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 376
-    Top = 88
+    Left = 368
+    Top = 77
     Width = 39
     Height = 19
     Caption = #1048#1053#1053':'
@@ -80,8 +80,8 @@ object red_ks: Tred_ks
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 376
-    Top = 128
+    Left = 368
+    Top = 110
     Width = 88
     Height = 19
     Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100':'
@@ -93,8 +93,8 @@ object red_ks: Tred_ks
     ParentFont = False
   end
   object Label7: TLabel
-    Left = 24
-    Top = 168
+    Left = 8
+    Top = 146
     Width = 84
     Height = 19
     Caption = #1050#1077#1084' '#1074#1099#1076#1072#1085':'
@@ -106,7 +106,7 @@ object red_ks: Tred_ks
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 24
+    Left = 8
     Top = 8
     Width = 56
     Height = 19
@@ -158,9 +158,9 @@ object red_ks: Tred_ks
     ParentFont = False
   end
   object dolgnost2: TDBLookupComboBox
-    Left = 470
-    Top = 124
-    Width = 217
+    Left = 493
+    Top = 102
+    Width = 186
     Height = 27
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -175,7 +175,7 @@ object red_ks: Tred_ks
   end
   object adress2: TEdit
     Left = 80
-    Top = 51
+    Top = 33
     Width = 273
     Height = 27
     Font.Charset = DEFAULT_CHARSET
@@ -187,9 +187,9 @@ object red_ks: Tred_ks
     TabOrder = 1
   end
   object tell2: TEdit
-    Left = 101
-    Top = 84
-    Width = 252
+    Left = 80
+    Top = 69
+    Width = 273
     Height = 27
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -200,8 +200,8 @@ object red_ks: Tred_ks
     TabOrder = 2
   end
   object inn2: TEdit
-    Left = 424
-    Top = 88
+    Left = 416
+    Top = 69
     Width = 263
     Height = 27
     Font.Charset = DEFAULT_CHARSET
@@ -213,8 +213,8 @@ object red_ks: Tred_ks
     TabOrder = 3
   end
   object dater2: TDateTimePicker
-    Left = 501
-    Top = 45
+    Left = 493
+    Top = 33
     Width = 186
     Height = 27
     Date = 41927.930941875000000000
@@ -228,9 +228,9 @@ object red_ks: Tred_ks
     TabOrder = 4
   end
   object pass2: TEdit
-    Left = 207
-    Top = 125
-    Width = 146
+    Left = 191
+    Top = 102
+    Width = 162
     Height = 27
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -241,9 +241,9 @@ object red_ks: Tred_ks
     TabOrder = 5
   end
   object vidan2: TEdit
-    Left = 114
-    Top = 165
-    Width = 573
+    Left = 106
+    Top = 138
+    Width = 247
     Height = 27
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -254,10 +254,10 @@ object red_ks: Tred_ks
     TabOrder = 6
   end
   object Button1: TButton
-    Left = 576
-    Top = 216
-    Width = 111
-    Height = 25
+    Left = 368
+    Top = 138
+    Width = 311
+    Height = 27
     Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

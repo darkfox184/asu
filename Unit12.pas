@@ -74,6 +74,7 @@ end;
 procedure TTip_ocenok.FormCreate(Sender: TObject);
 begin
 FDQuery1.Active:=true;
+DBEdit1.Clear;
 end;
 
 end.

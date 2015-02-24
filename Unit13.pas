@@ -38,6 +38,7 @@ type
     procedure DBGrid1CellClick(Column: TColumn);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Edit1Change(Sender: TObject);
+    procedure Edit2Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -71,8 +72,9 @@ FDQuery5.SQL.Add ('UPDATE groups SET name=:name WHERE id=:id');
 FDQuery5.ParamByName('name').AsString:=Edit2.Text;
 FDQuery5.ParamByName('id').AsString:=DBGrid1.Fields[0].AsString;
 FDQuery5.ExecSQL;
-FDQuery1.Refresh;
 Edit2.Clear;
+DataSource2.DataSet:=FDQuery1;
+FDQuery1.Refresh;
 end;
 
 procedure Tgroup.Button1Click(Sender: TObject);
@@ -107,6 +109,12 @@ procedure Tgroup.Edit1Change(Sender: TObject);
 begin
 if Edit1.Focused then
 addsp.Enabled:=true;
+end;
+
+procedure Tgroup.Edit2Change(Sender: TObject);
+begin
+if Edit2.Focused then
+Button2.Enabled:=true;
 end;
 
 procedure Tgroup.FormClose(Sender: TObject; var Action: TCloseAction);

@@ -1,9 +1,9 @@
 object Tip_ocenok: TTip_ocenok
-  Left = 265
-  Top = 326
+  Left = 342
+  Top = 274
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1090#1080#1087#1072' '#1086#1094#1077#1085#1082#1080
-  ClientHeight = 235
-  ClientWidth = 842
+  ClientHeight = 217
+  ClientWidth = 775
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,20 +11,20 @@ object Tip_ocenok: TTip_ocenok
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poMainFormCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19
   object Label1: TLabel
-    Left = 526
+    Left = 455
     Top = 5
     Width = 190
     Height = 19
     Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077' '#1090#1080#1087#1072' '#1086#1094#1077#1085#1082#1080':'
   end
   object Label2: TLabel
-    Left = 526
-    Top = 107
+    Left = 455
+    Top = 116
     Width = 221
     Height = 19
     Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077' '#1090#1080#1087#1072' '#1086#1094#1077#1085#1082#1080':'
@@ -33,8 +33,8 @@ object Tip_ocenok: TTip_ocenok
     AlignWithMargins = True
     Left = 8
     Top = 8
-    Width = 497
-    Height = 215
+    Width = 441
+    Height = 201
     DataSource = DataSource1
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     ReadOnly = True
@@ -60,43 +60,43 @@ object Tip_ocenok: TTip_ocenok
       end>
   end
   object Button1: TButton
-    Left = 526
-    Top = 190
-    Width = 139
+    Left = 455
+    Top = 174
+    Width = 146
     Height = 33
     Caption = #1059#1076#1072#1083#1080#1090#1100
     TabOrder = 1
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 701
-    Top = 190
-    Width = 139
+    Left = 624
+    Top = 174
+    Width = 142
     Height = 33
     Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
     TabOrder = 2
     OnClick = Button2Click
   end
   object Edit1: TEdit
-    Left = 526
+    Left = 455
     Top = 30
     Width = 311
     Height = 27
     TabOrder = 3
   end
   object addsp: TButton
-    Left = 701
-    Top = 72
-    Width = 137
-    Height = 29
+    Left = 455
+    Top = 63
+    Width = 311
+    Height = 33
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
     TabOrder = 4
     OnClick = addspClick
   end
   object DBEdit1: TDBEdit
     AlignWithMargins = True
-    Left = 526
-    Top = 144
+    Left = 455
+    Top = 141
     Width = 311
     Height = 27
     DataField = 'name'

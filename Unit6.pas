@@ -37,8 +37,11 @@ type
     DBGrid1: TDBGrid;
     Button1: TButton;
     FDQuery1: TFDQuery;
+    Delete_lc: TButton;
+    FDQuery2: TFDQuery;
     procedure DBGrid1DblClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Delete_lcClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -69,12 +72,15 @@ Redak_2.edit3.Text:=FDQuery1.Fields[4].AsString;
 Redak_2.edit4.Text:=FDQuery1.Fields[7].AsString;
 Redak_2.edit5.Text:=FDQuery1.Fields[8].AsString;
 Redak_2.edit6.Text:=FDQuery1.Fields[6].AsString;
-{DataModule4.FDQuery3.SQL.Clear;
-DataModule4.FDQuery3.SQL.Add ('select name from fam WHERE id=:in7 ');
-sr:=Datamodule4.FDQuery3.Fields[1].Asstring;
-DataModule4.FDQuery3.ParamByName('in7').AsString:=sr;
-DataModule4.FDQuery3.open;  }
 Redak_2.fam_id.KeyValue:=FDQuery1.fields[2].asstring;
+end;
+
+procedure Tkartastud.Delete_lcClick(Sender: TObject);
+begin
+FDQuery2.SQL.Clear;
+FDQuery2.SQL.Add ('DELETE FROM personal_r WHERE id='+DBGrid1.Fields[0].DisplayText+'');
+FDQuery2.ExecSQL;
+DataModule4.FDQuery1.Refresh;
 end;
 
 procedure Tkartastud.DBGrid1DblClick(Sender: TObject);

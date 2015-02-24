@@ -2,7 +2,7 @@ object Redak: TRedak
   Left = 441
   Top = 465
   BorderStyle = bsDialog
-  Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077
+  Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077' '#1089#1087#1077#1094#1080#1083#1100#1085#1086#1089#1090#1080
   ClientHeight = 112
   ClientWidth = 432
   Color = clBtnFace
@@ -12,7 +12,7 @@ object Redak: TRedak
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poMainFormCenter
   PixelsPerInch = 96
   TextHeight = 19
   object Label1: TLabel

@@ -70,6 +70,7 @@ end;
 procedure TSpecialnost.FormCreate(Sender: TObject);
 begin
 fdquery1.Active:=true;
+DBEdit1.Clear;
 end;
 
 end.

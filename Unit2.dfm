@@ -42428,7 +42428,8 @@ object main: Tmain
       F7107B8AD0658594794496E9CE3F1A79705D78F9D48CE4F5ACED610D33151F2F
       CA0E7F9D2C71076DEE4904679EFF00E4D1B011B023E451CA9CFD4500AE78E0F5
       22981FFFD9}
-    ExplicitLeft = -8
+    ExplicitWidth = 2592
+    ExplicitHeight = 1944
   end
   object MainMenu1: TMainMenu
     Left = 824
@@ -42451,9 +42452,13 @@ object main: Tmain
       Caption = #1054#1090#1095#1077#1090#1099
       object N14: TMenuItem
         Caption = #1057#1077#1084#1077#1089#1090#1088#1086#1074#1072#1103' '#1074#1077#1076#1086#1084#1086#1089#1090#1100
+        Enabled = False
+        OnClick = N14Click
       end
       object N15: TMenuItem
         Caption = #1040#1090#1077#1089#1090#1072#1094#1080#1086#1085#1085#1072#1103' '#1074#1077#1076#1086#1084#1086#1089#1090#1100
+        Enabled = False
+        OnClick = N15Click
       end
       object N16: TMenuItem
         Caption = #1054#1094#1077#1085#1082#1080
@@ -42465,6 +42470,8 @@ object main: Tmain
       end
       object N18: TMenuItem
         Caption = #1048#1090#1086#1075#1086#1074#1072#1103' '#1074#1077#1076#1086#1084#1086#1089#1090#1100
+        Enabled = False
+        OnClick = N18Click
       end
     end
     object N4: TMenuItem
@@ -42496,6 +42503,7 @@ object main: Tmain
     end
     object N5: TMenuItem
       Caption = #1055#1086#1084#1086#1097#1100
+      OnClick = N5Click
       object N10: TMenuItem
         Caption = #1051#1080#1094#1077#1085#1079#1080#1103
       end

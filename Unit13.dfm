@@ -3,7 +3,7 @@ object group: Tgroup
   Top = 219
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1075#1088#1091#1087#1087
   ClientHeight = 265
-  ClientWidth = 674
+  ClientWidth = 521
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,13 +11,13 @@ object group: Tgroup
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poMainFormCenter
   OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19
   object Label1: TLabel
-    Left = 354
+    Left = 199
     Top = 8
     Width = 188
     Height = 19
@@ -43,7 +43,7 @@ object group: Tgroup
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 354
+    Left = 199
     Top = 65
     Width = 131
     Height = 19
@@ -56,7 +56,7 @@ object group: Tgroup
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 354
+    Left = 199
     Top = 160
     Width = 170
     Height = 19
@@ -72,7 +72,7 @@ object group: Tgroup
     AlignWithMargins = True
     Left = 8
     Top = 33
-    Width = 305
+    Width = 185
     Height = 228
     DataSource = DataSource2
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -89,6 +89,7 @@ object group: Tgroup
         Expanded = False
         FieldName = 'id'
         Title.Caption = #8470
+        Width = 50
         Visible = True
       end
       item
@@ -100,7 +101,7 @@ object group: Tgroup
       end>
   end
   object Button1: TButton
-    Left = 519
+    Left = 364
     Top = 230
     Width = 147
     Height = 31
@@ -109,16 +110,17 @@ object group: Tgroup
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 354
+    Left = 199
     Top = 230
     Width = 147
     Height = 31
     Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
+    Enabled = False
     TabOrder = 2
     OnClick = Button2Click
   end
   object Edit1: TEdit
-    Left = 354
+    Left = 199
     Top = 90
     Width = 312
     Height = 27
@@ -126,9 +128,9 @@ object group: Tgroup
     OnChange = Edit1Change
   end
   object addsp: TButton
-    Left = 519
+    Left = 199
     Top = 123
-    Width = 147
+    Width = 312
     Height = 31
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
     Enabled = False
@@ -136,7 +138,7 @@ object group: Tgroup
     OnClick = addspClick
   end
   object DBLookupComboBox1: TDBLookupComboBox
-    Left = 354
+    Left = 199
     Top = 33
     Width = 311
     Height = 27
@@ -147,11 +149,12 @@ object group: Tgroup
     OnClick = DBLookupComboBox1Click
   end
   object Edit2: TEdit
-    Left = 354
+    Left = 199
     Top = 185
     Width = 312
     Height = 27
     TabOrder = 6
+    OnChange = Edit2Change
   end
   object DataSource1: TDataSource
     DataSet = FDQuery4

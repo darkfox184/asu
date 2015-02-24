@@ -2,8 +2,8 @@ object redstuds: Tredstuds
   Left = 397
   Top = 372
   Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077' '#1089#1090#1091#1076#1077#1085#1090#1072
-  ClientHeight = 247
-  ClientWidth = 634
+  ClientHeight = 208
+  ClientWidth = 512
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,24 +11,24 @@ object redstuds: Tredstuds
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poMainFormCenter
   PixelsPerInch = 96
   TextHeight = 19
   object Label1: TLabel
     Left = 24
-    Top = 16
+    Top = 56
     Width = 5
     Height = 19
   end
   object Label2: TLabel
     Left = 32
-    Top = 24
+    Top = 64
     Width = 5
     Height = 19
   end
   object Label3: TLabel
-    Left = 24
-    Top = 24
+    Left = 8
+    Top = 49
     Width = 71
     Height = 19
     Caption = #1060#1072#1084#1080#1083#1080#1103':'
@@ -40,39 +40,39 @@ object redstuds: Tredstuds
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 24
-    Top = 49
+    Left = 8
+    Top = 82
     Width = 35
     Height = 19
     Caption = #1048#1084#1103':'
   end
   object Label5: TLabel
-    Left = 24
-    Top = 84
+    Left = 8
+    Top = 115
     Width = 75
     Height = 19
     Caption = #1054#1090#1095#1077#1089#1090#1074#1086':'
   end
   object Label6: TLabel
-    Left = 24
-    Top = 128
+    Left = 8
+    Top = 148
     Width = 117
     Height = 19
     Caption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100':'
   end
   object Label7: TLabel
-    Left = 24
-    Top = 161
+    Left = 8
+    Top = 181
     Width = 57
     Height = 19
     Caption = #1043#1088#1091#1087#1087#1072':'
   end
   object Label8: TLabel
-    Left = 379
-    Top = 18
-    Width = 137
+    Left = 8
+    Top = 16
+    Width = 110
     Height = 19
-    Caption = #1058#1072#1073#1077#1083#1100#1085#1099#1081' '#1085#1086#1084#1077#1088':'
+    Caption = #1058#1072#1073#1077#1083#1100#1085#1099#1081' '#8470':'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -81,31 +81,31 @@ object redstuds: Tredstuds
     ParentFont = False
   end
   object fam: TEdit
-    Left = 147
-    Top = 10
+    Left = 131
+    Top = 41
     Width = 209
     Height = 27
     TabOrder = 0
   end
   object imya: TEdit
-    Left = 147
-    Top = 43
+    Left = 131
+    Top = 74
     Width = 209
     Height = 27
     TabOrder = 1
   end
   object otch: TEdit
-    Left = 147
-    Top = 76
+    Left = 131
+    Top = 107
     Width = 209
     Height = 27
     TabOrder = 2
   end
   object Button1: TButton
-    Left = 512
-    Top = 210
-    Width = 114
-    Height = 29
+    Left = 346
+    Top = 173
+    Width = 158
+    Height = 27
     Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
@@ -117,17 +117,17 @@ object redstuds: Tredstuds
     OnClick = Button1Click
   end
   object gpComboBox2: TDBLookupComboBox
-    Left = 147
-    Top = 153
-    Width = 231
+    Left = 131
+    Top = 173
+    Width = 209
     Height = 27
     ListFieldIndex = 1
     TabOrder = 4
   end
   object spComboBox1: TDBLookupComboBox
-    Left = 147
-    Top = 120
-    Width = 393
+    Left = 131
+    Top = 140
+    Width = 373
     Height = 27
     KeyField = 'id'
     ListField = 'name'
@@ -139,9 +139,9 @@ object redstuds: Tredstuds
     OnClick = spComboBox1Click
   end
   object nomer: TEdit
-    Left = 379
-    Top = 43
-    Width = 137
+    Left = 131
+    Top = 8
+    Width = 373
     Height = 27
     ReadOnly = True
     TabOrder = 6
@@ -151,11 +151,11 @@ object redstuds: Tredstuds
     SQL.Strings = (
       '')
     Left = 184
-    Top = 192
+    Top = 183
   end
   object DataSource3: TDataSource
     DataSet = FDQuery14
     Left = 251
-    Top = 193
+    Top = 184
   end
 end

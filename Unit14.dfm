@@ -2,8 +2,8 @@ object dolgnost: Tdolgnost
   Left = 244
   Top = 219
   Caption = #1053#1072#1089#1090#1088#1086#1082#1072' '#1076#1086#1083#1078#1085#1086#1089#1090#1077#1081' '#1089#1090#1091#1076#1077#1085#1090#1086#1074
-  ClientHeight = 235
-  ClientWidth = 843
+  ClientHeight = 228
+  ClientWidth = 616
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,19 +11,19 @@ object dolgnost: Tdolgnost
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poMainFormCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19
   object Label1: TLabel
-    Left = 526
+    Left = 295
     Top = 5
     Width = 180
     Height = 19
     Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077' '#1076#1086#1083#1078#1085#1086#1089#1090#1080':'
   end
   object Label2: TLabel
-    Left = 526
+    Left = 295
     Top = 107
     Width = 211
     Height = 19
@@ -33,7 +33,7 @@ object dolgnost: Tdolgnost
     AlignWithMargins = True
     Left = 8
     Top = 8
-    Width = 497
+    Width = 281
     Height = 215
     DataSource = DataSource1
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -55,12 +55,12 @@ object dolgnost: Tdolgnost
         Expanded = False
         FieldName = 'name'
         Title.Caption = #1053#1072#1079#1074#1072#1085#1080#1077
-        Width = 354
+        Width = 200
         Visible = True
       end>
   end
   object Button1: TButton
-    Left = 526
+    Left = 295
     Top = 190
     Width = 139
     Height = 33
@@ -69,7 +69,7 @@ object dolgnost: Tdolgnost
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 701
+    Left = 470
     Top = 190
     Width = 139
     Height = 33
@@ -78,23 +78,23 @@ object dolgnost: Tdolgnost
     OnClick = Button2Click
   end
   object Edit1: TEdit
-    Left = 526
+    Left = 295
     Top = 30
     Width = 311
     Height = 27
     TabOrder = 3
   end
   object addsp: TButton
-    Left = 701
+    Left = 295
     Top = 72
-    Width = 137
+    Width = 312
     Height = 29
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
     TabOrder = 4
     OnClick = addspClick
   end
   object DBEdit1: TDBEdit
-    Left = 526
+    Left = 295
     Top = 144
     Width = 311
     Height = 27

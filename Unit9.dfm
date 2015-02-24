@@ -4,7 +4,7 @@ object Specialnost: TSpecialnost
   BorderStyle = bsDialog
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1089#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1077#1081
   ClientHeight = 249
-  ClientWidth = 846
+  ClientWidth = 962
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,7 +12,7 @@ object Specialnost: TSpecialnost
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poMainFormCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19
@@ -54,8 +54,8 @@ object Specialnost: TSpecialnost
       end>
   end
   object Button1: TButton
-    Left = 526
-    Top = 125
+    Left = 816
+    Top = 70
     Width = 139
     Height = 33
     Caption = #1059#1076#1072#1083#1080#1090#1100
@@ -72,10 +72,10 @@ object Specialnost: TSpecialnost
     OnClick = Button2Click
   end
   object addsp: TButton
-    Left = 701
-    Top = 72
-    Width = 137
-    Height = 29
+    Left = 672
+    Top = 70
+    Width = 138
+    Height = 33
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
     TabOrder = 3
     OnClick = addspClick
@@ -83,7 +83,7 @@ object Specialnost: TSpecialnost
   object DBEdit1: TDBEdit
     Left = 527
     Top = 30
-    Width = 311
+    Width = 428
     Height = 27
     DataField = 'name'
     DataSource = DataSource1
