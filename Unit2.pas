@@ -78,12 +78,12 @@ end;
 
 procedure Tmain.N14Click(Sender: TObject);
 begin
-ShowMessage('Операция не возможна. Действие не добавлено!');
+ShowMessage('Операция невозможна. Действие не добавлено!');
 end;
 
 procedure Tmain.N15Click(Sender: TObject);
 begin
-ShowMessage('Операция не возможна. Действие не добавлено!');
+ShowMessage('Операция невозможна. Действие не добавлено!');
 end;
 
 procedure Tmain.N16Click(Sender: TObject);
@@ -98,7 +98,7 @@ end;
 
 procedure Tmain.N18Click(Sender: TObject);
 begin
-ShowMessage('Операция не возможна. Действие не добавлено!');
+ShowMessage('Операция невозможна. Действие не добавлено!');
 end;
 
 procedure Tmain.N19Click(Sender: TObject);
@@ -108,7 +108,7 @@ end;
 
 procedure Tmain.N5Click(Sender: TObject);
 begin
-ShowMessage('Операция не возможна. Действие не добавлено!');
+ShowMessage('Операция невозможна. Действие не добавлено!');
 end;
 
 procedure Tmain.N6Click(Sender: TObject);

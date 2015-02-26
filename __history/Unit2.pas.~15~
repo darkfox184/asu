@@ -38,6 +38,17 @@ type
     procedure N6Click(Sender: TObject);
     procedure N7Click(Sender: TObject);
     procedure N9Click(Sender: TObject);
+    procedure Nb1Click(Sender: TObject);
+    procedure N13Click(Sender: TObject);
+    procedure N12Click(Sender: TObject);
+    procedure N8Click(Sender: TObject);
+    procedure N19Click(Sender: TObject);
+    procedure N16Click(Sender: TObject);
+    procedure N17Click(Sender: TObject);
+    procedure N5Click(Sender: TObject);
+    procedure N14Click(Sender: TObject);
+    procedure N15Click(Sender: TObject);
+    procedure N18Click(Sender: TObject);
  
     { Private declarations }
   public
@@ -51,9 +62,54 @@ implementation
 
 {$R *.dfm}
 
-uses Unit1;
+uses Unit1, Unit12, Unit11,Unit14,Unit13,Unit15,Unit19, Unit21;
 
 
+
+procedure Tmain.N12Click(Sender: TObject);
+begin
+dolgnost.show;
+end;
+
+procedure Tmain.N13Click(Sender: TObject);
+begin
+kat_rod.show;
+end;
+
+procedure Tmain.N14Click(Sender: TObject);
+begin
+ShowMessage('Операция не возможна. Действие не добавлено!');
+end;
+
+procedure Tmain.N15Click(Sender: TObject);
+begin
+ShowMessage('Операция не возможна. Действие не добавлено!');
+end;
+
+procedure Tmain.N16Click(Sender: TObject);
+begin
+Ocenivanie.show;
+end;
+
+procedure Tmain.N17Click(Sender: TObject);
+begin
+propuskiadd.show;
+end;
+
+procedure Tmain.N18Click(Sender: TObject);
+begin
+ShowMessage('Операция не возможна. Действие не добавлено!');
+end;
+
+procedure Tmain.N19Click(Sender: TObject);
+begin
+uchplanst.show;
+end;
+
+procedure Tmain.N5Click(Sender: TObject);
+begin
+ShowMessage('Операция не возможна. Действие не добавлено!');
+end;
 
 procedure Tmain.N6Click(Sender: TObject);
 begin
@@ -65,9 +121,19 @@ begin
 spstuds.show;
 end;
 
+procedure Tmain.N8Click(Sender: TObject);
+begin
+group.show;
+end;
+
 procedure Tmain.N9Click(Sender: TObject);
 begin
 Specialnost.show;
+end;
+
+procedure Tmain.Nb1Click(Sender: TObject);
+begin
+Tip_ocenok.show;
 end;
 
 end.
